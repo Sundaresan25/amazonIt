@@ -1,3 +1,14 @@
+import banner_image1 from "../Assests/Images/banner_image_1.svg";
+import service1 from "../Assests/Images/services/service-1.svg";
+import service2 from "../Assests/Images/services/service-2.svg";
+import service3 from "../Assests/Images/services/service-3.svg";
+import about_frame from "../Assests/Images/about_frame.png";
+import bg_pattern from "../Assests/Images/bg_pattern.svg";
+import banner_image2 from "../Assests/Images/banner_image_2.svg";
+import blog1 from "../Assests/Images/blog/blog-1.jpg";
+import blog2 from "../Assests/Images/blog/blog-2.jpg";
+import blog3 from "../Assests/Images/blog/blog-3.jpg";
+
 export default function Home() {
   return (
     <>
@@ -20,7 +31,7 @@ export default function Home() {
               </div>
               <div class="col-md-6 py-5 wow zoomIn">
                 <div class="img-fluid text-center">
-                  <img src="../assets/img/banner_image_1.svg" alt="" />
+                  <img src={banner_image1} alt="" />
                 </div>
               </div>
             </div>
@@ -37,7 +48,7 @@ export default function Home() {
             <div class="col-lg-4">
               <div class="card-service wow fadeInUp">
                 <div class="header">
-                  <img src="../assets/img/services/service-1.svg" alt="" />
+                  <img src={service1} alt="" />
                 </div>
                 <div class="body">
                   <h5 class="text-secondary">SEO Consultancy</h5>
@@ -54,7 +65,7 @@ export default function Home() {
             <div class="col-lg-4">
               <div class="card-service wow fadeInUp">
                 <div class="header">
-                  <img src="../assets/img/services/service-2.svg" alt="" />
+                  <img src={service2} alt="" />
                 </div>
                 <div class="body">
                   <h5 class="text-secondary">Content Marketing</h5>
@@ -71,7 +82,7 @@ export default function Home() {
             <div class="col-lg-4">
               <div class="card-service wow fadeInUp">
                 <div class="header">
-                  <img src="../assets/img/services/service-3.svg" alt="" />
+                  <img src={service3} alt="" />
                 </div>
                 <div class="body">
                   <h5 class="text-secondary">Keyword Research</h5>
@@ -112,7 +123,7 @@ export default function Home() {
             </div>
             <div class="col-lg-6 py-3 wow fadeInRight">
               <div class="img-fluid py-3 text-center">
-                <img src="../assets/img/about_frame.png" alt="" />
+                <img src={about_frame} alt="" />
               </div>
             </div>
           </div>
@@ -231,7 +242,7 @@ export default function Home() {
       <div class="page-section banner-seo-check">
         <div
           class="wrap bg-image"
-          //   style="background-image: url(../assets/img/bg_pattern.svg);"
+          style={{ backgroundImage: `url(${bg_pattern})` }}
         >
           <div class="container text-center">
             <div class="row justify-content-center wow fadeInUp">
@@ -378,7 +389,7 @@ export default function Home() {
       <div class="page-section banner-info">
         <div
           class="wrap bg-image"
-          //   style="background-image: url(../assets/img/bg_pattern.svg);"
+          style={{ backgroundImage: `url(${bg_pattern})` }}
         >
           <div class="container">
             <div class="row align-items-center">
@@ -411,7 +422,7 @@ export default function Home() {
               </div>
               <div class="col-lg-6 py-3 wow fadeInRight">
                 <div class="img-fluid text-center">
-                  <img src="../assets/img/banner_image_2.svg" alt="" />
+                  <img src={banner_image2} alt="" />
                 </div>
               </div>
             </div>
@@ -432,7 +443,7 @@ export default function Home() {
               <div class="card-blog">
                 <div class="header">
                   <div class="post-thumb">
-                    <img src="../assets/img/blog/blog-1.jpg" alt="" />
+                    <img src={blog1} alt="" />
                   </div>
                 </div>
                 <div class="body">
@@ -450,7 +461,7 @@ export default function Home() {
               <div class="card-blog">
                 <div class="header">
                   <div class="post-thumb">
-                    <img src="../assets/img/blog/blog-2.jpg" alt="" />
+                    <img src={blog2} alt="" />
                   </div>
                 </div>
                 <div class="body">
@@ -468,7 +479,7 @@ export default function Home() {
               <div class="card-blog">
                 <div class="header">
                   <div class="post-thumb">
-                    <img src="../assets/img/blog/blog-3.jpg" alt="" />
+                    <img src={blog3} alt="" />
                   </div>
                 </div>
                 <div class="body">
