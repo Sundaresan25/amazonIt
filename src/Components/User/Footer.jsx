@@ -1,5 +1,36 @@
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+
 export default function Footer() {
+  const location = useLocation();
+  const paths = [
+    {
+      path: "/",
+      label: "Home",
+      active: location.pathname === "/" ? true : false,
+    },
+    {
+      path: "/about",
+      label: "About",
+      active: location.pathname.includes("/about") ? true : false,
+    },
+    {
+      path: "/services",
+      label: "Our Services",
+      active: location.pathname.includes("/services") ? true : false,
+    },
+    {
+      path: "/careers",
+      label: "Careers ",
+      active: location.pathname.includes("/careers") ? true : false,
+    },
+
+    {
+      path: "/contact",
+      label: "Contact Us",
+      active: location.pathname.includes("/contact") ? true : false,
+    },
+  ];
+
   return (
     <>
       <footer
@@ -34,23 +65,13 @@ export default function Footer() {
               </div>
             </div>
             <div class="col-lg-3 py-3">
-              <h5>Company</h5>
+              <h5>Quick Links</h5>
               <ul class="footer-menu">
-                <li>
-                  <Link to="/about">About Us</Link>
-                </li>
-                <li>
-                  <Link to="#">Career</Link>
-                </li>
-                <li>
-                  <Link to="#">Advertise</Link>
-                </li>
-                <li>
-                  <Link to="#">Terms of Service</Link>
-                </li>
-                <li>
-                  <Link to="#">Help & Support</Link>
-                </li>
+                {paths.map((data, index) => (
+                  <li>
+                    <Link to={data.path}>{data.label}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div class="col-lg-3 py-3">
@@ -64,18 +85,18 @@ export default function Footer() {
               </a>
             </div>
             <div class="col-lg-3 py-3">
-              <h5>Newsletter</h5>
-              <p>Get updates, news or events on your mail.</p>
-              <form action="#">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter your email.."
-                />
-                <button type="submit" class="btn btn-success btn-block mt-2">
-                  Subscribe
-                </button>
-              </form>
+              <h5>Our Services</h5>
+              <ul class="footer-menu">
+                <li>
+                  <Link to={"#"}>IT Services</Link>
+                </li>
+                <li>
+                  <Link to={"#"}>Non-IT Services</Link>
+                </li>
+                <li>
+                  <Link to={"#"}>Other Services</Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

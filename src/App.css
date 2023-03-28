@@ -1,3 +1,25 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
+.banner-seo-check .count {
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+}
+.banner-seo-check .count h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 0;
+}
+.banner-seo-check .count .fa {
+  font-size: 40px;
+  display: block;
+  color: #fff;
+}
+.banner-seo-check .number {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}

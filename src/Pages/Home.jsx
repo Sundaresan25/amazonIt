@@ -8,6 +8,19 @@ import banner_image2 from "../Assests/Images/banner_image_2.svg";
 import blog1 from "../Assests/Images/blog/blog-1.jpg";
 import blog2 from "../Assests/Images/blog/blog-2.jpg";
 import blog3 from "../Assests/Images/blog/blog-3.jpg";
+import v1 from "../Assests/Images/vendor-1.jpg";
+import v2 from "../Assests/Images/vendor-2.jpg";
+import v3 from "../Assests/Images/vendor-3.jpg";
+import v4 from "../Assests/Images/vendor-4.jpg";
+import v5 from "../Assests/Images/vendor-5.jpg";
+import v6 from "../Assests/Images/vendor-6.jpg";
+import v7 from "../Assests/Images/vendor-7.jpg";
+import v8 from "../Assests/Images/vendor-8.jpg";
+import v9 from "../Assests/Images/vendor-9.jpg";
+
+import { testimonials } from "../Utilities/Utilities";
+// import OwlCarousel from "react-owl-carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
 
 export default function Home() {
   return (
@@ -130,7 +143,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="page-section bg-light">
+      {/* <div class="page-section bg-light">
         <div class="container">
           <div class="text-center wow fadeInUp">
             <div class="subhead">Our services</div>
@@ -237,6 +250,96 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div> */}
+
+      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+          <div
+            class="section-title text-center position-relative pb-3 mb-5 mx-auto"
+            style={{ maxWidth: "600px" }}
+          >
+            <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
+            <h1 class="mb-0">
+              We Are Here to Grow Your Business Exponentially
+            </h1>
+          </div>
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <div class="row g-5">
+                <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                  <div
+                    class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                    style={{ width: "60px", height: "60px" }}
+                  >
+                    <i class="fa fa-cubes text-white"></i>
+                  </div>
+                  <h4>Best In Industry</h4>
+                  <p class="mb-0">
+                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
+                    diam dolor
+                  </p>
+                </div>
+                <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                  <div
+                    class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                    style={{ width: "60px", height: "60px" }}
+                  >
+                    <i class="fa fa-award text-white"></i>
+                  </div>
+                  <h4>Award Winning</h4>
+                  <p class="mb-0">
+                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
+                    diam dolor
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4  wow zoomIn"
+              data-wow-delay="0.9s"
+              style={{ minHeight: "350px" }}
+            >
+              <div class="position-relative h-100">
+                <img
+                  class="position-absolute w-100 h-100 rounded wow zoomIn"
+                  data-wow-delay="0.1s"
+                  src={blog3}
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="row g-5">
+                <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                  <div
+                    class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                    style={{ width: "60px", height: "60px" }}
+                  >
+                    <i class="fa fa-users-cog text-white"></i>
+                  </div>
+                  <h4>Professional Staff</h4>
+                  <p class="mb-0">
+                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
+                    diam dolor
+                  </p>
+                </div>
+                <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                  <div
+                    class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                    style={{ width: "60px", height: "60px" }}
+                  >
+                    <i class="fa fa-phone-alt text-white"></i>
+                  </div>
+                  <h4>24/7 Support</h4>
+                  <p class="mb-0">
+                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
+                    diam dolor
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="page-section banner-seo-check">
@@ -244,143 +347,112 @@ export default function Home() {
           class="wrap bg-image"
           style={{ backgroundImage: `url(${bg_pattern})` }}
         >
-          <div class="container text-center">
-            <div class="row justify-content-center wow fadeInUp">
-              <div class="col-lg-8">
-                <h2 class="mb-4">Check your Website SEO</h2>
-                <form action="#">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="E.g google.com"
-                  />
-                  <button type="submit" class="btn btn-success">
-                    Check Now
-                  </button>
-                </form>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 ">
+                <div class="count">
+                  {" "}
+                  <span class="fa fa-smile-o"></span>
+                  <p class="number">126</p>
+                  <h4>Happy Clients</h4>{" "}
+                </div>
+              </div>
+              <div class="col-md-3 ">
+                <div class="count">
+                  {" "}
+                  <span class="fa fa-smile-o"></span>
+                  <p class="number">535</p>
+                  <h4>Awards</h4>{" "}
+                </div>
+              </div>
+              <div class="col-md-3 ">
+                <div class="count">
+                  {" "}
+                  <span class="fa fa-smile-o"></span>
+                  <p class="number">896</p>
+                  <h4>Total Hours</h4>{" "}
+                </div>
+              </div>
+              <div class="col-md-3 ">
+                <div class="count">
+                  {" "}
+                  <span class="fa fa-smile-o"></span>
+                  <p class="number">777</p>
+                  <h4>Projects Complete</h4>{" "}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="page-section">
-        <div class="container">
-          <div class="text-center wow fadeInUp">
-            <div class="subhead">Pricing Plan</div>
-            <h2 class="title-section">Choose plan the right for you</h2>
-            <div class="divider mx-auto"></div>
+      <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container px-lg-5">
+          <div
+            class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style={{ maxWidth: "600px" }}
+          >
+            <h1 class="mb-3 fw-bold text-primary">What Say Our Clients!!!</h1>
+            <p class="mb-1">
+              Vero justo sed sed vero clita amet. Et justo vero sea diam elitr
+              amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero
+              elitr sit clita.
+            </p>
           </div>
-          <div class="row mt-5">
-            <div class="col-lg-4 py-3 wow zoomIn">
-              <div class="card-pricing">
-                <div class="header">
-                  <div class="pricing-type">Basic</div>
-                  <div class="price">
-                    <span class="dollar">$</span>
-                    <h1>
-                      39<span class="suffix">.99</span>
-                    </h1>
+          <div class="owl-carousel row testimonial-carousel">
+            {/* <OwlCarousel className={"owl-theme"} {...options}> */}
+            {testimonials.map((data, index) => (
+              <div
+                key={index}
+                class="testimonial-item position-relative bg-light border-top border-5 border-primary rounded p-4 my-4 col-md-4"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 ms-5 translate-middle bg-primary rounded-circle"
+                  style={{
+                    width: "45px",
+                    height: "45px",
+                    marginTop: " -3px",
+                  }}
+                >
+                  <i class="fa fa-quote-left text-white"></i>
+                </div>
+                <p class="mt-3">
+                  Dolor et eos labore, stet justo sed est sed. Diam sed sed
+                  dolor stet amet eirmod eos labore diam
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded-circle"
+                    src="img/testimonial-1.jpg"
+                    style={{ width: "50px", height: "50px" }}
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Client Name</h6>
+                    <small>Profession</small>
                   </div>
-                  <h5>Per Month</h5>
-                </div>
-                <div class="body">
-                  <p>
-                    25 Analytics <span class="suffix">Campaign</span>
-                  </p>
-                  <p>
-                    1,300 Change <span class="suffix">Keywords</span>
-                  </p>
-                  <p>
-                    Social Media <span class="suffix">Reviews</span>
-                  </p>
-                  <p>
-                    1 Free <span class="suffix">Optimization</span>
-                  </p>
-                  <p>
-                    24/7 <span class="suffix">Support</span>
-                  </p>
-                </div>
-                <div class="footer">
-                  <a href="#" class="btn btn-pricing btn-block">
-                    Subscribe
-                  </a>
                 </div>
               </div>
-            </div>
+            ))}
+            {/* </OwlCarousel> */}
+          </div>
+        </div>
+      </div>
 
-            <div class="col-lg-4 py-3 wow zoomIn">
-              <div class="card-pricing marked">
-                <div class="header">
-                  <div class="pricing-type">Standar</div>
-                  <div class="price">
-                    <span class="dollar">$</span>
-                    <h1>
-                      59<span class="suffix">.99</span>
-                    </h1>
-                  </div>
-                  <h5>Per Month</h5>
-                </div>
-                <div class="body">
-                  <p>
-                    25 Analytics <span class="suffix">Campaign</span>
-                  </p>
-                  <p>
-                    1,300 Change <span class="suffix">Keywords</span>
-                  </p>
-                  <p>
-                    Social Media <span class="suffix">Reviews</span>
-                  </p>
-                  <p>
-                    1 Free <span class="suffix">Optimization</span>
-                  </p>
-                  <p>
-                    24/7 <span class="suffix">Support</span>
-                  </p>
-                </div>
-                <div class="footer">
-                  <a href="#" class="btn btn-pricing btn-block">
-                    Subscribe
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 py-3 wow zoomIn">
-              <div class="card-pricing">
-                <div class="header">
-                  <div class="pricing-type">Professional</div>
-                  <div class="price">
-                    <span class="dollar">$</span>
-                    <h1>
-                      99<span class="suffix">.99</span>
-                    </h1>
-                  </div>
-                  <h5>Per Month</h5>
-                </div>
-                <div class="body">
-                  <p>
-                    25 Analytics <span class="suffix">Campaign</span>
-                  </p>
-                  <p>
-                    1,300 Change <span class="suffix">Keywords</span>
-                  </p>
-                  <p>
-                    Social Media <span class="suffix">Reviews</span>
-                  </p>
-                  <p>
-                    1 Free <span class="suffix">Optimization</span>
-                  </p>
-                  <p>
-                    24/7 <span class="suffix">Support</span>
-                  </p>
-                </div>
-                <div class="footer">
-                  <a href="#" class="btn btn-pricing btn-block">
-                    Subscribe
-                  </a>
-                </div>
-              </div>
+      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 mb-5">
+          <h3 className="text-center fw-bold text-primary">Our Partners</h3>
+          <div class="bg-white">
+            <div class="owl-carousel vendor-carousel">
+              <img className="img-fluid m-2" src={v1} alt="" />
+              <img className="img-fluid m-2" src={v2} alt="" />
+              <img className="img-fluid m-2" src={v3} alt="" />
+              <img className="img-fluid m-2" src={v4} alt="" />
+              <img className="img-fluid m-2" src={v5} alt="" />
+              <img className="img-fluid m-2" src={v6} alt="" />
+              <img className="img-fluid m-2" src={v7} alt="" />
+              <img className="img-fluid m-2" src={v8} alt="" />
+              <img className="img-fluid m-2" src={v9} alt="" />
             </div>
           </div>
         </div>
@@ -430,11 +502,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="page-section">
+      {/* <div class="page-section">
         <div class="container">
           <div class="text-center wow fadeInUp">
-            <div class="subhead">Our Blog</div>
-            <h2 class="title-section">Read Latest News</h2>
+            <div class="subhead">Our Services</div>
+            <h2 class="title-section">Amazon It solutions</h2>
             <div class="divider mx-auto"></div>
           </div>
 
@@ -500,7 +572,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
