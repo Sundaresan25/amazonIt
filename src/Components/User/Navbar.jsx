@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Logo from "../../Assests/Images/Amazon-Logo1.png";
 
 export default function Navbar() {
   const location = useLocation();
@@ -11,19 +12,19 @@ export default function Navbar() {
       active: location.pathname === "/" ? true : false,
     },
     {
-      path: "/about",
-      label: "About",
-      active: location.pathname.includes("/about") ? true : false,
-    },
-    {
       path: "/services",
-      label: "Our Services",
+      label: "Services",
       active: location.pathname.includes("/services") ? true : false,
     },
     {
       path: "/careers",
       label: "Careers ",
       active: location.pathname.includes("/careers") ? true : false,
+    },
+    {
+      path: "/about",
+      label: "About",
+      active: location.pathname.includes("/about") ? true : false,
     },
 
     {
@@ -44,28 +45,32 @@ export default function Navbar() {
         }}
       >
         <div class="container">
-          <Link to="/" class="navbar-brand">
-            Amazon<span class="text-primary"> IT Solutions</span>
-          </Link>
+          <div className="d-flex">
+            <Link to="/" class="navbar-brand">
+              {/* Amazon<span class="text-primary"> IT Solutions</span> */}
+              <img src={Logo} alt="" className="img-fluid" />
+            </Link>
 
-          <button
-            class="navbar-toggler"
-            data-toggle="collapse"
-            data-target="#navbarContent"
-            aria-controls="navbarContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+            >
+              <span class="fa fa-bars"></span>
+            </button>
+          </div>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarCollapse"
+            style={{ zIndex: "9999" }}
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
               {paths.map((menuitem, index) => (
                 <Link
                   key={index}
                   to={menuitem.path}
-                  class={`nav-item nav-link ${menuitem.active ? "active" : ""}`}
+                  className={`nav-link ${menuitem.active ? "active" : ""}`}
                 >
                   {menuitem.label}
                 </Link>

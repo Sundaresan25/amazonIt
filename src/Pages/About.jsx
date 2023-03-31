@@ -1,11 +1,14 @@
-import about_frame from "../Assests/Images/about_frame.png";
-import about1 from "../Assests/Images/about1.jpg";
+import about1 from "../Assests/Images/Office Logo 1.jpg";
+import image1 from "../Assests/Images/image1.jpg";
+import image2 from "../Assests/Images/image2.jpg";
 
 import { teams } from "../Utilities/Utilities";
 
+import { Player } from "@lottiefiles/react-lottie-player";
+
 export default function About() {
   return (
-    <>
+    <section className="about">
       <header>
         <div class="container">
           <div class="page-banner">
@@ -19,28 +22,31 @@ export default function About() {
                     <li class="breadcrumb-item active">About</li>
                   </ul>
                 </nav>
-                <h1 class="text-center">About Us</h1>
+                <h2 class="text-center">About Us</h2>
               </div>
             </div>
           </div>
         </div>
       </header>
-
-      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div
+        class="container-fluid py-5 wow fadeInUp aboutCon"
+        data-wow-delay="0.1s"
+      >
         <div class="container py-5">
           <div class="row g-5">
             <div class="col-lg-7">
-              <div class="section-title position-relative pb-3 mb-5">
+              <div class="section-title position-relative pb-3 mb-md-2">
                 <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
-                <h1 class="mb-0">
-                  The Best IT Solution With 10 Years of Experience
-                </h1>
+                <h2 class="mb-0">Welcome to Amazon IT Solutions</h2>
               </div>
               <p class="mb-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum et
-                tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum
-                et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
-                justo et tempor eirmod magna dolore erat amet
+                Amazon IT Solutions is a leading provider of IT solutions and
+                services to businesses of all sizes. Our team of experienced
+                professionals specializes in developing custom software
+                solutions, providing cloud computing services, and offering IT
+                staffing and recruitment services. With over 10 years of
+                experience, we have a proven track record of delivering
+                exceptional results for our clients.
               </p>
               <div class="row g-0 mb-3">
                 <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
@@ -48,8 +54,8 @@ export default function About() {
                     <i class="fa fa-check text-primary me-3"></i>Award Winning
                   </h5>
                   <h5 class="mb-3">
-                    <i class="fa fa-check text-primary me-3"></i>Professional
-                    Staff
+                    <i class="fa fa-check text-primary me-3"></i>Custom
+                    Solutions
                   </h5>
                 </div>
                 <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
@@ -57,7 +63,8 @@ export default function About() {
                     <i class="fa fa-check text-primary me-3"></i>24/7 Support
                   </h5>
                   <h5 class="mb-3">
-                    <i class="fa fa-check text-primary me-3"></i>Fair Prices
+                    <i class="fa fa-check text-primary me-3"></i>Experienced
+                    Professionals
                   </h5>
                 </div>
               </div>
@@ -65,29 +72,26 @@ export default function About() {
                 class="d-flex align-items-center mb-4 wow fadeIn"
                 data-wow-delay="0.6s"
               >
-                <div
-                  class="bg-primary d-flex align-items-center justify-content-center rounded"
-                  style={{ width: "60px", height: "60px" }}
-                >
+                <div class="bg-primary d-flex align-items-center justify-content-center rounded  phoneLogo">
                   <i class="fa fa-phone-alt text-white"></i>
                 </div>
                 <div class="ps-4">
                   <h5 class="mb-2">Call to ask any question</h5>
-                  <h4 class="text-primary mb-0">+012 345 6789</h4>
+                  <h4 class="text-primary mb-0">+91 8121058121 </h4>
                 </div>
               </div>
-              <a
+              {/* <a
                 href="quote.html"
                 class="btn btn-primary py-3 px-5 mt-3 wow zoomIn"
                 data-wow-delay="0.9s"
               >
                 Request A Quote
-              </a>
+              </a> */}
             </div>
-            <div class="col-lg-5" style={{ minHeight: "500px" }}>
+            <div class="col-lg-5 ">
               <div class="position-relative h-100">
                 <img
-                  class="position-absolute w-100 h-100 rounded wow zoomIn"
+                  class="img-fluid w-100 h-100 rounded wow zoomIn"
                   data-wow-delay="0.9s"
                   src={about1}
                   style={{ objectFit: "cover" }}
@@ -98,37 +102,51 @@ export default function About() {
         </div>
       </div>
 
-      <div class="page-section">
+      <div class="page-section p-0 m-0 aboutCon2" id="about">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-6 py-3">
-              <h2 class="title-section">Our Company</h2>
+            <div class="col-lg-6 py-3 wow fadeInUp">
+              <span class="subhead">About us</span>
+              <h2 class="title-section">The number #1 It Solutions Company</h2>
               <div class="divider"></div>
 
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.
+                Welcome to Amazon IT Solutions, a leading recruitment agency for
+                IT companies. we have been connecting top talent with some of
+                the most innovative and dynamic companies in the industry.
               </p>
               <p>
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                nisi saepe eum ipsa. Tempore dolore itaque est blanditiis libero
-                fugiat, ea nostrum nam at tempora quis, facilis officiis nemo
-                mollitia.
+                Our team is comprised of experienced recruiters who are
+                dedicated in providing personalized services to both clients and
+                candidates. Having base in Hyderabad along with expanded wings
+                in Bangalore, Chennai, Vijayawada and other major cities of
+                India, we have a wide reach and are able to connect with top
+                talent across the country.
               </p>
             </div>
-            <div class="col-lg-6 py-3">
+            <div class="col-lg-6 py-3 wow fadeInRight">
               <div class="img-fluid py-3 text-center">
-                <img src={about_frame} alt="about" />
+                {/* <img src={about_frame} alt="" />
+                 */}
+                <Player
+                  src="https://assets3.lottiefiles.com/packages/lf20_lrdkqhnc.json"
+                  background="transparent"
+                  speed={1}
+                  className="head-img"
+                  // autoplay
+                />
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section aboutCon3">
+        <div class="container">
+          <div class="row align-items-center">
             <div class="col-lg-6 py-3">
               <div class="img-fluid py-3 text-center">
-                <img src={about_frame} alt="about" />
+                <img src={image1} className="img-fluid" alt="about" />
               </div>
             </div>
             <div class="col-lg-6 py-3">
@@ -136,51 +154,47 @@ export default function About() {
               <div class="divider"></div>
 
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.
+                Our mission at Amazon IT Solutions is to connect talented
+                candidates with top-notch clients while providing exceptional
+                customer service to both. We strive to ensure that our
+                recruitment process is seamless, transparent, and efficient for
+                everyone involved.
               </p>
               <p>
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                nisi saepe eum ipsa. Tempore dolore itaque est blanditiis libero
-                fugiat, ea nostrum nam at tempora quis, facilis officiis nemo
-                mollitia.
+                We believe in building lasting relationships with our clients
+                and candidates, based on mutual trust, respect, and
+                transparency. Our ultimate goal is to help our clients build
+                high-performing teams and to help candidates find fulfilling
+                career opportunities that match their skills and aspirations.
               </p>
             </div>
             <div class="col-lg-6 py-3">
               <h2 class="title-section">Our Vision</h2>
               <div class="divider"></div>
-
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.
+                At Amazon IT Solutions, our vision is to become the go-to
+                technology partner for businesses looking to drive digital
+                transformation and innovation. We are committed to providing
+                cutting-edge solutions that empower our clients to achieve their
+                business goals and stay ahead of the competition.
               </p>
               <p>
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                nisi saepe eum ipsa. Tempore dolore itaque est blanditiis libero
-                fugiat, ea nostrum nam at tempora quis, facilis officiis nemo
-                mollitia.
+                We aim to be recognized as a leader in the technology industry,
+                known for our expertise, innovation, and dedication to customer
+                satisfaction. Our goal is to build long-term partnerships with
+                our clients and help them succeed in the digital age.
               </p>
             </div>
             <div class="col-lg-6 py-3">
               <div class="img-fluid py-3 text-center">
-                <img src={about_frame} alt="about" />
+                <img src={image2} className="img-fluid" alt="about" />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container-xxl py-5">
+      {/* <div class="container-xxl py-5">
         <div class="container px-lg-5">
           <div
             class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
@@ -227,9 +241,8 @@ export default function About() {
             ))}
           </div>
         </div>
-      </div>
-
-      <div class="container-xxl py-5">
+      </div> */}
+      {/* <div class="container-xxl py-5">
         <div class="container px-lg-5">
           <div
             class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
@@ -324,7 +337,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div> */}
+    </section>
   );
 }

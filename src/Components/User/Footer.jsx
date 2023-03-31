@@ -9,19 +9,19 @@ export default function Footer() {
       active: location.pathname === "/" ? true : false,
     },
     {
-      path: "/about",
-      label: "About",
-      active: location.pathname.includes("/about") ? true : false,
-    },
-    {
       path: "/services",
-      label: "Our Services",
+      label: "Services",
       active: location.pathname.includes("/services") ? true : false,
     },
     {
       path: "/careers",
       label: "Careers ",
       active: location.pathname.includes("/careers") ? true : false,
+    },
+    {
+      path: "/about",
+      label: "About",
+      active: location.pathname.includes("/about") ? true : false,
     },
 
     {
@@ -31,21 +31,52 @@ export default function Footer() {
     },
   ];
 
+  const socialMedia = [
+    {
+      name: "Facebook",
+      url: "",
+      logo: "mai-logo-facebook-f",
+    },
+    {
+      name: "LinkedIn",
+      url: "",
+      logo: "mai-logo-linkedin",
+    },
+    {
+      name: "WhatsApp",
+      url: "",
+      logo: "mai-logo-whatsapp",
+    },
+    {
+      name: "Instagram",
+      url: "",
+      logo: "mai-logo-instagram",
+    },
+    {
+      name: "Youtube",
+      url: "",
+      logo: "mai-logo-youtube",
+    },
+  ];
+
   return (
-    <>
+    <section className="footer">
       <footer
-        class="page-footer bg-image"
+        class="page-footer bg-image footerCon "
         // style=background-image: url(../assets/img/world_pattern.svg);"
       >
         <div class="container">
-          <div class="row mb-5">
-            <div class="col-lg-3 py-3">
-              <h3>Amazon It Solutions</h3>
+          <div class="row ">
+            <div
+              class="col-lg-3 py-3"
+              // style={{ borderRight: "1px solid grey" }}
+            >
+              <h5>Amazon IT Solutions</h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                amet, repellendus eius blanditiis in iusto eligendi iure.
+                we are committed to provide a seamless and efficient recruitment
+                process for both clients and candidates.
               </p>
-
+              {/* 
               <div class="social-media-button">
                 <a href="#">
                   <span class="mai-logo-facebook-f"></span>
@@ -62,29 +93,53 @@ export default function Footer() {
                 <a href="#">
                   <span class="mai-logo-youtube"></span>
                 </a>
-              </div>
+              </div> */}
             </div>
-            <div class="col-lg-3 py-3">
+            <div
+              class="col-lg-3 py-3"
+              // style={{ borderRight: "1px solid grey" }}
+            >
               <h5>Quick Links</h5>
               <ul class="footer-menu">
                 {paths.map((data, index) => (
-                  <li>
+                  <li key={index}>
                     <Link to={data.path}>{data.label}</Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div class="col-lg-3 py-3">
-              <h5>Contact Us</h5>
-              <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
-              <a href="#" class="footer-link">
-                +00 1122 3344 5566
-              </a>
-              <a href="#" class="footer-link">
-                seogram@temporary.com
-              </a>
+
+            <div
+              class="col-lg-3 py-3"
+              // style={{ borderRight: "1px solid grey" }}
+            >
+              <h5>Follow us</h5>
+              <ul class="footer-menu">
+                {socialMedia.map((data, index) => (
+                  <li key={index}>
+                    <Link to={data.url}>
+                      {" "}
+                      <span class={data.logo}></span> {data.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div class="col-lg-3 py-3">
+              <h5>Corporate Office</h5>
+              <p>
+                5/A Plot No, Door NO.1-99 8, 2, Image Gardens Road, Madhapur,
+                Hyderabad - 500081 (Image Gardens Line)
+              </p>
+              <a href="#" class="footer-link">
+                +91 8121058121
+              </a>
+              <a href="#" class="footer-link">
+                support@amazonitsolutions.in
+              </a>
+            </div>
+
+            {/* <div class="col-lg-3 py-3">
               <h5>Our Services</h5>
               <ul class="footer-menu">
                 <li>
@@ -97,10 +152,10 @@ export default function Footer() {
                   <Link to={"#"}>Other Services</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>
-    </>
+    </section>
   );
 }

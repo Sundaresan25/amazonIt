@@ -1,6 +1,6 @@
 import "./App.css";
 import Index from "./Pages";
-import "./Assests/Css/bootstrap.css";
+// import "./Assests/Css/bootstrap.css";
 import "./Assests/Css/theme.css";
 import "./Assests/Css/maicons.css";
 

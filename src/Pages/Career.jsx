@@ -10,6 +10,7 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import blog3 from "../Assests/Images/blog/blog-3.jpg";
+import { Player } from "@lottiefiles/react-lottie-player";
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -53,7 +54,7 @@ export const Career = () => {
     setExpanded(newExpanded ? panel : false);
   };
   return (
-    <>
+    <section className="careers">
       <header>
         <div class="container">
           <div class="page-banner">
@@ -67,14 +68,14 @@ export const Career = () => {
                     <li class="breadcrumb-item active">Careers</li>
                   </ul>
                 </nav>
-                <h1 class="text-center">Careers</h1>
+                <h2 class="text-center">Careers</h2>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <div class="container-fluid py-5">
+      <div class="container-fluid py-5 careersCon">
         <div class="container py-5">
           <div class="row align-items-center">
             <div class="col-lg-5">
@@ -90,105 +91,104 @@ export const Career = () => {
                   class="text-primary text-uppercase mb-3"
                   style={{ letterSpacing: "5px" }}
                 >
-                  About Careers
+                  Careers at Amazon IT Solutions
                 </h5>
-                <h1>Innovative Way To Learn</h1>
+                <h2>Innovative Way To Build Your Career</h2>
               </div>
               <p>
-                Aliquyam accusam clita nonumy ipsum sit sea clita ipsum clita,
-                ipsum dolores amet voluptua duo dolores et sit ipsum rebum,
-                sadipscing et erat eirmod diam kasd labore clita est. Diam
-                sanctus gubergren sit rebum clita amet, sea est sea vero sed et.
-                Sadipscing labore tempor at sit dolor clita consetetur diam.
-                Diam ut diam tempor no et, lorem dolore invidunt no nonumy stet
-                ea labore, dolor justo et sit gubergren diam sed sed no ipsum.
-                Sit tempor ut nonumy elitr dolores justo aliquyam ipsum stet
+                At Amazon IT Solutions, we are passionate about delivering
+                innovative technology solutions to our clients. We are always on
+                the lookout for talented individuals who share our passion and
+                want to be part of a dynamic and collaborative team. Join us and
+                be part of a company that is shaping the future of technology.
               </p>
-
-              <ul
-                style={{
-                  listStyle: "none",
-                }}
-              >
+              <ul style={{ listStyle: "none" }}>
                 <li>
-                  <i class="fa fa-check-circle  text-primary mx-2"></i>Persius
-                  appetere pro mea harum ridens
+                  <i class="fa fa-check-circle  text-primary mx-2"></i>
+                  Competitive compensation and benefits package
                 </li>
                 <li>
                   <i class="fa fa-check-circle text-primary mx-2"></i>
-                  Instructior vis at causae legimus luptatum mel
+                  Opportunities for growth and development
                 </li>
                 <li>
-                  <i class="fa fa-check-circle text-primary mx-2"></i>Maluisset
-                  id persius appetere pro mea harum
+                  <i class="fa fa-check-circle text-primary mx-2"></i>A
+                  collaborative and inclusive work environment
                 </li>
               </ul>
-              {/* <a
-                href=""
-                class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2"
-              >
-                Learn More
-              </a> */}
+              {/* <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">
+      Learn More
+    </a> */}
             </div>
           </div>
 
           <Accordion
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
+            className="careersAcordian"
           >
             <AccordionSummary
               aria-controls="panel1d-content"
               id="panel1d-header"
             >
-              <Typography>Collapsible Group Item #1</Typography>
+              <Typography>Join our IT Solutions team at Amazon</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                At Amazon, we are looking for talented and motivated IT
+                professionals to join our team and help us continue to innovate
+                and deliver cutting-edge technology solutions to our customers.
+                Our IT Solutions group is responsible for developing and
+                maintaining critical systems that support our business
+                operations around the world.
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion
             expanded={expanded === "panel2"}
             onChange={handleChange("panel2")}
+            className="careersAcordian"
           >
             <AccordionSummary
               aria-controls="panel2d-content"
               id="panel2d-header"
             >
-              <Typography>Collapsible Group Item #2</Typography>
+              <Typography>
+                Opportunities for IT professionals at Amazon
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                We are seeking individuals with a strong background in software
+                engineering, network engineering, or infrastructure
+                architecture. As a member of our team, you will have the
+                opportunity to work on complex projects that require innovative
+                solutions to unique challenges. You will work alongside some of
+                the brightest minds in the industry and have the chance to
+                develop new skills and advance your career.
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion
             expanded={expanded === "panel3"}
             onChange={handleChange("panel3")}
+            className="careersAcordian"
           >
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
             >
-              <Typography>Collapsible Group Item #3</Typography>
+              <Typography>
+                Diversity and inclusivity in Amazon's IT Solutions team
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                Whether you are just starting out in your career or are an
+                experienced IT professional, Amazon offers a range of
+                opportunities to suit your interests and experience level. We
+                are committed to fostering a diverse and inclusive workplace,
+                and we encourage applicants from all backgrounds to apply.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -247,16 +247,33 @@ export const Career = () => {
             </div>
           </div> */}
 
-          <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5">
+          <div
+            class="container-fluid py-md-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div class="container py-md-5">
               <div
-                class="section-title text-center position-relative pb-3 mb-5 mx-auto"
+                class="section-title text-center position-relative pb-md-3 mb-0 mx-auto"
                 style={{ maxWidth: "600px" }}
               >
                 <h5 class="fw-bold text-primary text-uppercase">Our Jobs</h5>
-                <h2 class="mb-0">Loremum ipsumvataajk dpsodspodpo </h2>
+                <p class="mb-0">
+                  We regret to inform you that there are currently no vacancies
+                  available in our IT Solutions team at Amazon. However, we
+                  encourage you to check back on our careers page regularly for
+                  updates on any new job openings that may arise in the future.
+                  Thank you for your interest in joining our team.{" "}
+                </p>
               </div>
-              <div class="row g-5">
+
+              <Player
+                src="https://assets1.lottiefiles.com/private_files/lf30_ugedlis6.json"
+                background="transparent"
+                speed={1}
+                className="head-img img-fluid"
+                autoplay
+              />
+              {/* <div class="row g-5">
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
                   <img class="img-fluid" src={blog3} alt="" />
                   <a
@@ -285,7 +302,7 @@ export const Career = () => {
                       {/* <a class="text-uppercase" href="">
                         Apply Now<i class="bi bi-arrow-right"></i>
                       </a> */}
-                    </div>
+              {/* </div>
                   </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
@@ -316,10 +333,10 @@ export const Career = () => {
                       {/* <a class="text-uppercase" href="">
                         Apply Now<i class="bi bi-arrow-right"></i>
                       </a> */}
-                    </div>
+              {/* </div>
                   </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                </div> */}
+              {/* <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
                   <img class="img-fluid" src={blog3} alt="" />
                   <a
                     class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
@@ -347,18 +364,19 @@ export const Career = () => {
                       {/* <a class="text-uppercase" href="">
                         Apply Now<i class="bi bi-arrow-right"></i>
                       </a> */}
-                    </div>
+              {/* </div>
                   </div>
                 </div>
-              </div>
+              </div>  */}
+              {/* </div>  */}
             </div>
           </div>
-          <div className="text-center">
+          {/* <div className="text-center">
             Send Your resume to
             <span class="text-primary"> colorgmail@tSolutions</span>
-          </div>
+          </div> */}
         </div>
       </div>
-    </>
+    </section>
   );
 };

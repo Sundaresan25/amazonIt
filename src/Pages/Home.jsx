@@ -8,43 +8,69 @@ import banner_image2 from "../Assests/Images/banner_image_2.svg";
 import blog1 from "../Assests/Images/blog/blog-1.jpg";
 import blog2 from "../Assests/Images/blog/blog-2.jpg";
 import blog3 from "../Assests/Images/blog/blog-3.jpg";
-import v1 from "../Assests/Images/vendor-1.jpg";
-import v2 from "../Assests/Images/vendor-2.jpg";
-import v3 from "../Assests/Images/vendor-3.jpg";
-import v4 from "../Assests/Images/vendor-4.jpg";
-import v5 from "../Assests/Images/vendor-5.jpg";
-import v6 from "../Assests/Images/vendor-6.jpg";
-import v7 from "../Assests/Images/vendor-7.jpg";
-import v8 from "../Assests/Images/vendor-8.jpg";
-import v9 from "../Assests/Images/vendor-9.jpg";
 
+import { Player } from "@lottiefiles/react-lottie-player";
 import { testimonials } from "../Utilities/Utilities";
+import { Link } from "react-router-dom";
 // import OwlCarousel from "react-owl-carousel";
 // import "owl.carousel/dist/assets/owl.carousel.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { OurPartners } from "../Components/User/OurPartners";
 
 export default function Home() {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
-    <>
+    <section className="home">
       <header>
         <div class="container">
           <div class="page-banner home-banner">
             <div class="row align-items-center flex-wrap-reverse h-100">
               <div class="col-md-6 py-5 wow fadeInLeft">
-                <h1 class="mb-4">Let's Check and Optimize your website!</h1>
+                <h1 class="mb-4  heading1">
+                  Connecting top talent with diverse job opportunities!
+                </h1>
                 <p class="text-lg text-grey mb-5">
-                  Ignite the most powerfull growth engine you have ever built
-                  for your company
+                  Find your dream job in IT, non-IT, or chat roles. Empowering
+                  your career journey with exciting job opportunities
                 </p>
-                <a href="#" class="btn btn-primary btn-split">
-                  Watch Video{" "}
+                <Link to="/services" class="btn btn-primary btn-split">
+                  Read More{" "}
                   <div class="fab">
                     <span class="mai-play"></span>
                   </div>
-                </a>
+                </Link>
               </div>
               <div class="col-md-6 py-5 wow zoomIn">
                 <div class="img-fluid text-center">
-                  <img src={banner_image1} alt="" />
+                  {/* <img src={banner_image1} alt="" /> */}
+
+                  <Player
+                    src="https://assets4.lottiefiles.com/packages/lf20_ebbfp58m.json"
+                    background="transparent"
+                    speed={1}
+                    className="head-img"
+                    autoplay
+                  />
                 </div>
               </div>
             </div>
@@ -54,7 +80,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       <div class="page-section">
         <div class="container">
           <div class="row">
@@ -64,14 +89,14 @@ export default function Home() {
                   <img src={service1} alt="" />
                 </div>
                 <div class="body">
-                  <h5 class="text-secondary">SEO Consultancy</h5>
+                  <h5 class="text-secondary">IT Jobs</h5>
                   <p>
-                    We help you define your SEO objective & develop a realistic
-                    strategy with you
+                    We provide a variety of IT job opportunities for aspiring
+                    candidates
                   </p>
-                  <a href="service.html" class="btn btn-primary">
+                  <Link to="/services" class="btn btn-primary">
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -81,14 +106,14 @@ export default function Home() {
                   <img src={service2} alt="" />
                 </div>
                 <div class="body">
-                  <h5 class="text-secondary">Content Marketing</h5>
+                  <h5 class="text-secondary">Non-IT Jobs</h5>
                   <p>
-                    We help you define your SEO objective & develop a realistic
-                    strategy with you
+                    We offer a range of non-IT job opportunities to help you
+                    start your career
                   </p>
-                  <a href="service.html" class="btn btn-primary">
+                  <Link to="/services" class="btn btn-primary">
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -98,14 +123,14 @@ export default function Home() {
                   <img src={service3} alt="" />
                 </div>
                 <div class="body">
-                  <h5 class="text-secondary">Keyword Research</h5>
+                  <h5 class="text-secondary">Chat Support Jobs</h5>
                   <p>
-                    We help you define your SEO objective & develop a realistic
-                    strategy with you
+                    We provide efficient and reliable chat support job
+                    opportunities for job seekers
                   </p>
-                  <a href="service.html" class="btn btn-primary">
+                  <Link to="/services" class="btn btn-primary">
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -118,25 +143,36 @@ export default function Home() {
           <div class="row align-items-center">
             <div class="col-lg-6 py-3 wow fadeInUp">
               <span class="subhead">About us</span>
-              <h2 class="title-section">The number #1 SEO Service Company</h2>
+              <h2 class="title-section">The number #1 It Solutions Company</h2>
               <div class="divider"></div>
 
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.
+                Welcome to Amazon IT Solutions, a leading recruitment agency for
+                IT companies. we have been connecting top talent with some of
+                the most innovative and dynamic companies in the industry.
               </p>
               <p>
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren.
+                At Amazon IT Solutions, we are committed to provide a seamless
+                and efficient recruitment process for both clients and
+                candidates. We strive to build long-term relationships with our
+                clients and help them build high-performing teams that drive
+                their business forward
               </p>
-              <a href="about.html" class="btn btn-primary mt-3">
+              <Link to="/about" class="btn btn-primary mt-3">
                 Read More
-              </a>
+              </Link>
             </div>
             <div class="col-lg-6 py-3 wow fadeInRight">
               <div class="img-fluid py-3 text-center">
-                <img src={about_frame} alt="" />
+                {/* <img src={about_frame} alt="" />
+                 */}
+                <Player
+                  src="https://assets3.lottiefiles.com/packages/lf20_lrdkqhnc.json"
+                  background="transparent"
+                  speed={1}
+                  className="head-img"
+                  // autoplay
+                />
               </div>
             </div>
           </div>
@@ -252,16 +288,19 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div
+        class="container-fluid py-5 wow fadeInUp whyChooseUs"
+        data-wow-delay="0.1s"
+      >
         <div class="container py-5">
           <div
             class="section-title text-center position-relative pb-3 mb-5 mx-auto"
             style={{ maxWidth: "600px" }}
           >
-            <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
-            <h1 class="mb-0">
-              We Are Here to Grow Your Business Exponentially
-            </h1>
+            <h5 class="fw-bold text-primary text-uppercase ">Why Choose Us</h5>
+            <h2 class="mb-0">
+              Connecting Top Talent with Innovative IT Companies
+            </h2>
           </div>
           <div class="row g-5">
             <div class="col-lg-4">
@@ -273,10 +312,11 @@ export default function Home() {
                   >
                     <i class="fa fa-cubes text-white"></i>
                   </div>
-                  <h4>Best In Industry</h4>
+                  <h4>Personalized Services</h4>
                   <p class="mb-0">
-                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
-                    diam dolor
+                    Our experienced recruiters are dedicated to providing
+                    personalized services to both clients and candidates,
+                    ensuring the best fit for both.
                   </p>
                 </div>
                 <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
@@ -286,10 +326,11 @@ export default function Home() {
                   >
                     <i class="fa fa-award text-white"></i>
                   </div>
-                  <h4>Award Winning</h4>
+                  <h4>Wide Reach</h4>
                   <p class="mb-0">
-                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
-                    diam dolor
+                    With bases in Hyderabad, Bangalore, Chennai, Vijayawada, and
+                    other major cities in India, we have a wide reach and can
+                    connect with top talent across the country.
                   </p>
                 </div>
               </div>
@@ -317,10 +358,11 @@ export default function Home() {
                   >
                     <i class="fa fa-users-cog text-white"></i>
                   </div>
-                  <h4>Professional Staff</h4>
+                  <h4>Consultative Approach</h4>
                   <p class="mb-0">
-                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
-                    diam dolor
+                    We take a consultative approach to recruitment, taking the
+                    time to understand our clients' needs and culture in order
+                    to find the best fit for them.
                   </p>
                 </div>
                 <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
@@ -330,10 +372,10 @@ export default function Home() {
                   >
                     <i class="fa fa-phone-alt text-white"></i>
                   </div>
-                  <h4>24/7 Support</h4>
+                  <h4>Efficient Process</h4>
                   <p class="mb-0">
-                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
-                    diam dolor
+                    Our extensive network and deep knowledge of the IT industry
+                    allow us to find candidates
                   </p>
                 </div>
               </div>
@@ -349,7 +391,7 @@ export default function Home() {
         >
           <div class="container">
             <div class="row">
-              <div class="col-md-3 ">
+              <div class="col-md-4 ">
                 <div class="count">
                   {" "}
                   <span class="fa fa-smile-o"></span>
@@ -357,108 +399,106 @@ export default function Home() {
                   <h4>Happy Clients</h4>{" "}
                 </div>
               </div>
-              <div class="col-md-3 ">
+              <div class="col-md-4 ">
                 <div class="count">
                   {" "}
                   <span class="fa fa-smile-o"></span>
-                  <p class="number">535</p>
-                  <h4>Awards</h4>{" "}
+                  <p class="number">100+</p>
+                  <h4>Placements</h4>{" "}
                 </div>
               </div>
-              <div class="col-md-3 ">
+              <div class="col-md-4 ">
                 <div class="count">
                   {" "}
                   <span class="fa fa-smile-o"></span>
-                  <p class="number">896</p>
-                  <h4>Total Hours</h4>{" "}
+                  <p class="number">100+</p>
+                  <h4>Companies</h4>{" "}
                 </div>
               </div>
-              <div class="col-md-3 ">
+              {/* <div class="col-md-3 ">
                 <div class="count">
                   {" "}
                   <span class="fa fa-smile-o"></span>
                   <p class="number">777</p>
                   <h4>Projects Complete</h4>{" "}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container-xxl py-5 wow fadeInUp client" data-wow-delay="0.1s">
         <div class="container px-lg-5">
           <div
             class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
             data-wow-delay="0.1s"
             style={{ maxWidth: "600px" }}
           >
-            <h1 class="mb-3 fw-bold text-primary">What Say Our Clients!!!</h1>
+            <h2 class="mb-3 fw-bold text-primary">What Say Our Clients!!!</h2>
             <p class="mb-1">
-              Vero justo sed sed vero clita amet. Et justo vero sea diam elitr
-              amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero
-              elitr sit clita.
+              We pride ourselves on delivering exceptional service to our
+              clients. Here are some of the kind words they've had to say about
+              working with us:
             </p>
           </div>
           <div class="owl-carousel row testimonial-carousel">
-            {/* <OwlCarousel className={"owl-theme"} {...options}> */}
-            {testimonials.map((data, index) => (
-              <div
-                key={index}
-                class="testimonial-item position-relative bg-light border-top border-5 border-primary rounded p-4 my-4 col-md-4"
-              >
+            <Carousel
+              ssr
+              partialVisbile
+              swipeable={true}
+              draggable={true}
+              // showDots={true}
+              responsive={responsive}
+              customTransition="transform 0.5s ease-in-out" // means to render carousel on server-side.
+              infinite={true}
+              autoPlay={true}
+              autoPlaySpeed={1500}
+              keyBoardControl={true}
+              // customTransition="all .5"
+              transitionDuration={500}
+              containerClass="carousel-container"
+              // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+              arrows={false}
+              dotListClass="custom-dot-list-style"
+              itemClass="carousel-item-padding-40-px"
+            >
+              {testimonials.map((data, index) => (
                 <div
-                  class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 ms-5 translate-middle bg-primary rounded-circle"
-                  style={{
-                    width: "45px",
-                    height: "45px",
-                    marginTop: " -3px",
-                  }}
+                  key={index}
+                  class="testimonial-item position-relative bg-light border-top border-5 border-primary rounded p-4 mx-3 my-4 testimonial"
                 >
-                  <i class="fa fa-quote-left text-white"></i>
-                </div>
-                <p class="mt-3">
-                  Dolor et eos labore, stet justo sed est sed. Diam sed sed
-                  dolor stet amet eirmod eos labore diam
-                </p>
-                <div class="d-flex align-items-center">
-                  <img
-                    class="img-fluid flex-shrink-0 rounded-circle"
-                    src="img/testimonial-1.jpg"
-                    style={{ width: "50px", height: "50px" }}
-                  />
-                  <div class="ps-3">
-                    <h6 class="fw-bold mb-1">Client Name</h6>
-                    <small>Profession</small>
+                  <div
+                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 ms-5 translate-middle bg-primary rounded-circle"
+                    style={{
+                      width: "45px",
+                      height: "45px",
+                      marginTop: " -3px",
+                    }}
+                  >
+                    <i class="fa fa-quote-left text-white"></i>
+                  </div>
+                  <p class="mt-3 text-justify">{data.sentence}</p>
+                  <div class="d-flex align-items-center">
+                    {/* <img
+                      class="img-fluid flex-shrink-0 rounded-circle"
+                      src="img/testimonial-1.jpg"
+                      style={{ width: "50px", height: "50px" }}
+                    /> */}
+                    <div class="ps-3">
+                      <h6 class="fw-bold mb-1">{data.name}</h6>
+                      <small>{data.profession}</small>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-            {/* </OwlCarousel> */}
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>
+      <OurPartners />
 
-      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-          <h3 className="text-center fw-bold text-primary">Our Partners</h3>
-          <div class="bg-white">
-            <div class="owl-carousel vendor-carousel">
-              <img className="img-fluid m-2" src={v1} alt="" />
-              <img className="img-fluid m-2" src={v2} alt="" />
-              <img className="img-fluid m-2" src={v3} alt="" />
-              <img className="img-fluid m-2" src={v4} alt="" />
-              <img className="img-fluid m-2" src={v5} alt="" />
-              <img className="img-fluid m-2" src={v6} alt="" />
-              <img className="img-fluid m-2" src={v7} alt="" />
-              <img className="img-fluid m-2" src={v8} alt="" />
-              <img className="img-fluid m-2" src={v9} alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="page-section banner-info">
+      <div class="page-section banner-info infoCover">
         <div
           class="wrap bg-image"
           style={{ backgroundImage: `url(${bg_pattern})` }}
@@ -467,34 +507,48 @@ export default function Home() {
             <div class="row align-items-center">
               <div class="col-lg-6 py-3 pr-lg-5 wow fadeInUp">
                 <h2 class="title-section">
-                  SEO to Improve Brand <br /> Visibility
+                  IT Staffing and Recruitment Services
                 </h2>
                 <div class="divider"></div>
                 <p>
-                  We're an experienced and talented team of passionate
-                  consultants who breathe with search engine marketing.
+                  Welcome to Amazon IT Solutions, a leading recruitment agency
+                  for IT companies. We have been connecting top talent with some
+                  of the most innovative and dynamic companies in the industry.
                 </p>
-
                 <ul class="theme-list theme-list-light text-white">
                   <li>
-                    <div class="h5">SEO Content Strategy</div>
+                    <div class="h5">Experienced Recruiters</div>
                     <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor
+                      Our team is comprised of experienced recruiters who are
+                      dedicated to providing personalized services to both
+                      clients and candidates.
                     </p>
                   </li>
                   <li>
-                    <div class="h5">B2B SEO</div>
+                    <div class="h5">Wide Reach</div>
                     <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor
+                      With our base in Hyderabad and expanded wings in
+                      Bangalore, Chennai, Vijayawada, and other major cities of
+                      India, we have a wide reach and are able to connect with
+                      top talent across the country.
+                    </p>
+                  </li>
+
+                  <li>
+                    <div class="h5">Long-term Relationships</div>
+                    <p>
+                      At Amazon IT Solutions, we are committed to providing a
+                      seamless and efficient recruitment process for both
+                      clients and candidates. We strive to build long-term
+                      relationships with our clients and help them build
+                      high-performing teams that drive their business forward.
                     </p>
                   </li>
                 </ul>
               </div>
               <div class="col-lg-6 py-3 wow fadeInRight">
                 <div class="img-fluid text-center">
-                  <img src={banner_image2} alt="" />
+                  <img className="img-fluid" src={banner_image2} alt="" />
                 </div>
               </div>
             </div>
@@ -573,6 +627,6 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-    </>
+    </section>
   );
 }

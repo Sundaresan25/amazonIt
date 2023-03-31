@@ -2,6 +2,27 @@
   font-family: "Roboto", sans-serif;
 }
 
+.carousel-container {
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-next {
+  transform: translateX(100%);
+}
+
+.carousel-item-prev {
+  transform: translateX(-100%);
+}
+
+.carousel-item-active {
+  transform: translateX(0%);
+}
+
 .banner-seo-check .count {
   padding: 50px;
   background: rgba(255, 255, 255, 0.1);
@@ -22,4 +43,151 @@
   font-size: 30px;
   font-weight: 700;
   margin: 0;
+}
+/* navbar */
+.navbar img {
+  width: 25%;
+}
+
+/* home */
+.home .testimonial {
+  height: 45vh;
+}
+/* services */
+.services .technologies-img {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* careers */
+.careers .head-img {
+  height: 400px;
+  width: 400px;
+}
+
+/* about */
+.about .phoneLogo {
+  width: 60px;
+  height: 60px;
+}
+
+/* contact */
+.contact .contactCon h4 {
+  font-size: 15px;
+}
+.contact .icon {
+  width: 60px;
+  height: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar img {
+    width: 60%;
+  }
+  .footer .footerCon h5 {
+    font-size: 20px;
+  }
+  .footer .footerCon a {
+    font-size: 15px;
+  }
+
+  .home .heading1 {
+    font-size: 25px;
+  }
+  .home .whyChooseUs h2 {
+    font-size: 25px;
+  }
+  .home .client h2 {
+    font-size: 25px;
+  }
+  .home .testimonial {
+    height: 100%;
+  }
+  .home .infoCover h2 {
+    font-size: 25px;
+  }
+  .home .infoCover p {
+    font-size: 15px;
+  }
+  .services .serviceCon h2 {
+    font-size: 25px;
+  }
+  .services .serviceCon h5 {
+    font-size: 18px;
+  }
+  .services .servicesFeature h2 {
+    font-size: 20px;
+  }
+  .services .serviceTab h2 {
+    font-size: 20px;
+  }
+  .services .serviceTab p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .careers .careersCon h5 {
+    font-size: 15px;
+  }
+  .careers .careersCon h2 {
+    font-size: 25px;
+  }
+  .careers .careersCon p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .careers .careersCon li {
+    font-size: 12px;
+  }
+  .careers .careersAcordian p {
+    font-size: 12px;
+    text-align: start;
+  }
+  .careers .head-img {
+    height: 200px;
+    width: 200px;
+  }
+  .about .aboutCon h2 {
+    font-size: 20px;
+  }
+  .about .aboutCon p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .about .aboutCon h5 {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .about .aboutCon h4 {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .about .phoneLogo {
+    width: 30px;
+    height: 30px;
+  }
+  .about .aboutCon2 h2 {
+    font-size: 20px;
+  }
+  .about .aboutCon2 p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .about .aboutCon3 h2 {
+    font-size: 20px;
+  }
+  .about .aboutCon3 p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .contact .contactCon h2 {
+    font-size: 20px;
+  }
+  .contact .contactCon h5 {
+    font-size: 15px;
+  }
+
+  .contact .icon {
+    width: 30px;
+    height: 30px;
+  }
 }

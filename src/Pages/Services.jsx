@@ -1,25 +1,28 @@
-// import service1 from "../Assests/Images/services/service-1.svg";
-// import service2 from "../Assests/Images/services/service-2.svg";
-// import service3 from "../Assests/Images/services/service-3.svg";
 import IconTabs from "../Components/User/Tabs";
-import about_frame from "../Assests/Images/about_frame.png";
-
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import DirectionsIcon from "@mui/icons-material/Directions";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import React from "react";
 
-import v1 from "../Assests/Images/vendor-1.jpg";
-import v2 from "../Assests/Images/vendor-2.jpg";
-import v3 from "../Assests/Images/vendor-3.jpg";
-import v4 from "../Assests/Images/vendor-4.jpg";
-import v5 from "../Assests/Images/vendor-5.jpg";
-import v6 from "../Assests/Images/vendor-6.jpg";
-import v7 from "../Assests/Images/vendor-7.jpg";
-import v8 from "../Assests/Images/vendor-8.jpg";
-import v9 from "../Assests/Images/vendor-9.jpg";
 import service1 from "../Assests/Images/service1.jpg";
 import service2 from "../Assests/Images/service2.jpg";
+import ourservice1 from "../Assests/Images/ourservice1.jpg";
+import ourservice2 from "../Assests/Images/ourservice2.jpg";
+import ourservice3 from "../Assests/Images/ourservice3.jpg";
+import { OurPartners } from "../Components/User/OurPartners";
+import reactNativeImage from "../Assests/Images/program/atom.png";
+import androidImage from "../Assests/Images/program/android.png";
+import csharpImage from "../Assests/Images/program/c-sharp.png";
+import djangoImage from "../Assests/Images/program/django.png";
+import javaImage from "../Assests/Images/program/java.png";
+import jsImage from "../Assests/Images/program/js.png";
+import magentoImage from "../Assests/Images/program/magento.png";
+import phpImage from "../Assests/Images/program/php.png";
+import pythonImage from "../Assests/Images/program/python.png";
+import reactImage from "../Assests/Images/program/react.png";
+import iosImage from "../Assests/Images/program/smartphone.png";
+import aspnetImage from "../Assests/Images/program/web.png";
+
 export default function Services() {
   const tabs = [
     {
@@ -36,13 +39,64 @@ export default function Services() {
     },
   ];
 
+  const technologiesList = [
+    {
+      label: "React Native",
+      img: reactNativeImage,
+    },
+    {
+      label: "Android",
+      img: androidImage,
+    },
+    {
+      label: "C#",
+      img: csharpImage,
+    },
+    {
+      label: "Django",
+      img: djangoImage,
+    },
+    {
+      label: "Java",
+      img: javaImage,
+    },
+    {
+      label: "JavaScript",
+      img: jsImage,
+    },
+    {
+      label: "Magento",
+      img: magentoImage,
+    },
+    {
+      label: "PHP",
+      img: phpImage,
+    },
+    {
+      label: "Python",
+      img: pythonImage,
+    },
+    {
+      label: "React",
+      img: reactImage,
+    },
+    {
+      label: "IOS",
+      img: iosImage,
+    },
+    {
+      label: "ASP.Net",
+      img: aspnetImage,
+    },
+  ];
+
   const [tabValue, setTabValue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };
 
   return (
-    <>
+    <section className="services">
       <header>
         <div class="container">
           <div class="page-banner">
@@ -56,48 +110,51 @@ export default function Services() {
                     <li class="breadcrumb-item active">Services</li>
                   </ul>
                 </nav>
-                <h1 class="text-center">Our Services</h1>
+                <h2 class="text-center">Our Services</h2>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <div class="container py-5">
+      <div class="container py-5 serviceCon">
         <div class="row g-5">
           <div class="col-lg-7">
-            <div class="section-title position-relative pb-3 mb-5">
-              <h5 class="fw-bold text-primary text-uppercase">It Services</h5>
-              <h1 class="mb-0">
-                The Best IT Solution With 10 Years of Experience
-              </h1>
+            <div class="section-title position-relative pb-3 mb-md-5">
+              <h5 class="fw-bold text-primary text-uppercase">IT Services</h5>
+              <h2 class="mb-0">
+                Amazon IT Solutions - Your Partner for IT Recruitment
+              </h2>
             </div>
             <p class="mb-4">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor
-              sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem
-              et sit, sed stet no labore lorem sit. Sanctus clita duo justo et
-              tempor eirmod magna dolore erat amet Tempor erat elitr rebum at
-              clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam
-              et eos labore. Clita erat ipsum et lorem et sit, sed stet no
-              labore lorem sit. Sanctus clita duo justo et tempor eirmod magna
-              dolore erat amet
+              Amazon IT Solutions is a leading recruitment agency for IT
+              companies, dedicated to connecting top talent with some of the
+              most innovative and dynamic companies in the industry. Our team of
+              experienced recruiters takes a consultative approach to
+              recruitment, understanding our clients' needs and culture to find
+              the best fit for them. We have an extensive network and deep
+              knowledge of the IT industry, allowing us to find candidates who
+              not only have the necessary technical skills but who also share
+              our clients' values and vision.
             </p>
             <div class="row g-0 mb-3">
               <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
                 <h5 class="mb-3">
-                  <i class="fa fa-check text-primary me-3"></i>Award Winning
+                  <i class="fa fa-check text-primary me-3"></i>Personalized
+                  Services
                 </h5>
                 <h5 class="mb-3">
                   <i class="fa fa-check text-primary me-3"></i>
-                  Professional Staff
+                  Wide Reach Across India
                 </h5>
               </div>
               <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
                 <h5 class="mb-3">
-                  <i class="fa fa-check text-primary me-3"></i>24/7 Support
+                  <i class="fa fa-check text-primary me-3"></i>Efficient
+                  Recruitment Process
                 </h5>
                 <h5 class="mb-3">
-                  <i class="fa fa-check text-primary me-3"></i>Fair Prices
+                  <i class="fa fa-check text-primary me-3"></i>Building Teams
                 </h5>
               </div>
             </div>
@@ -127,62 +184,6 @@ export default function Services() {
             </h1> */}
       </div>
 
-      {/* <div class="row">
-            <div class="col-lg-4">
-              <div class="card-service">
-                <div class="header">
-                  <img src={service1} alt="" />
-                </div>
-                <div class="body">
-                  <h5 class="text-secondary">IT Services</h5>
-                  <p>
-                    We help you define your SEO objective & develop a realistic
-                    strategy with you
-                  </p>
-                  <a href="service.html" class="btn btn-primary">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card-service">
-                <div class="header">
-                  <img src={service2} alt="" />
-                </div>
-                <div class="body">
-                  <h5 class="text-secondary">Non IT Services</h5>
-                  <p>
-                    We help you define your SEO objective & develop a realistic
-                    strategy with you
-                  </p>
-                  <a href="service.html" class="btn btn-primary">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card-service">
-                <div class="header">
-                  <img src={service3} alt="" />
-                </div>
-                <div class="body">
-                  <h5 class="text-secondary">Other Services</h5>
-                  <p>
-                    We help you define your SEO objective & develop a realistic
-                    strategy with you
-                  </p>
-                  <a href="service.html" class="btn btn-primary">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> */}
-      {/* </div>
-      </div> */}
-
       <IconTabs
         tabs={tabs}
         value={tabValue}
@@ -193,95 +194,138 @@ export default function Services() {
         }}
       />
 
-      <div class="page-section mt-0 p-0">
+      <div class="page-section mt-0 p-0 serviceTab">
         {tabValue === 0 ? (
           <>
             <div class="container">
-              <div class="row align-items-center">
+              <div class="row align-items-center m-0">
                 <div class="col-lg-6 py-3">
-                  <h2 class="title-section">Our Company</h2>
+                  <h2 class="title-section">IT Services</h2>
                   <div class="divider"></div>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua.
+                    At Amazon IT Solutions, we offer a wide range of IT services
+                    to meet the needs of businesses in the technology sector.
+                    Our services include software development, network
+                    management, cybersecurity, cloud computing, and more.
                   </p>
                   <p>
-                    At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet clita kasd gubergren.
+                    We pride ourselves on our expertise and experience in the
+                    industry, as well as our commitment to providing
+                    high-quality solutions to our clients. Our team of skilled
+                    professionals is dedicated to delivering exceptional service
+                    and support to help your business succeed.
                   </p>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laborum nisi saepe eum ipsa. Tempore dolore itaque est
-                    blanditiis libero fugiat, ea nostrum nam at tempora quis,
-                    facilis officiis nemo mollitia.
+                    Contact us today to learn more about how we can help your
+                    business thrive in the ever-evolving world of technology.
                   </p>
                 </div>
                 <div class="col-lg-6 py-3">
                   <div class="img-fluid py-3 text-center">
-                    <img src={about_frame} alt="about" />
+                    <img className="img-fluid" src={ourservice1} alt="about" />
                   </div>
+                </div>
+              </div>
+              <div>
+                <h2 class=" text-center fw-bold text-primary my-3 ">
+                  Discover what you're looking for
+                </h2>
+                <div className="row">
+                  {technologiesList.map((data, index) => (
+                    <div className="col-lg-2 col-md-2 ">
+                      <div className="shadow rounded my-2 mt-md-5 p-2 ">
+                        <img
+                          src={data.img}
+                          alt={data.label}
+                          className="img-fluid technologies-img mx-2"
+                        />
+                        <span style={{ fontWeight: "600" }}>{data.label}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </>
         ) : tabValue === 1 ? (
           <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center m-0">
               <div class="col-lg-6 py-3">
-                <h2 class="title-section">Our Company</h2>
+                <h2 class="title-section">Non IT Services</h2>
                 <div class="divider"></div>
 
                 <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua.
+                  Our non-IT services include providing recruitment processes
+                  for both clients and candidates, specifically for voice and
+                  non-voice services. We understand the importance of finding
+                  the right talent for your business, which is why we offer
+                  recruitment solutions that are tailored to your unique needs.
                 </p>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  clita kasd gubergren.
+                  Our services cover the entire recruitment process, from
+                  sourcing candidates to onboarding them into your organization.
+                  Contact us today to learn more about how we can help you find
+                  the right talent for your voice and non-voice services.
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laborum nisi saepe eum ipsa. Tempore dolore itaque est
-                  blanditiis libero fugiat, ea nostrum nam at tempora quis,
-                  facilis officiis nemo mollitia.
+                  <span
+                    style={{
+                      color: "black",
+                      fontWeight: "600",
+                    }}
+                  >
+                    Voice Process
+                  </span>{" "}
+                  : Customer Service Executive, Technical Support Executive,
+                  Telesales Executive, Telecaller, Teleperformance Associate,
+                  Voice Support Associate, Inbound/Outbound Sales Executive,
+                  Call Center Agent, etc.
+                </p>
+                <p>
+                  <span style={{ color: "black", fontWeight: "600" }}>
+                    Non-Voice Process
+                  </span>{" "}
+                  : Data Entry Operator, Back Office Executive, Document
+                  Management Specialist, Content Moderator, Email Support
+                  Executive, Chat Support Executive, Social Media Executive,
+                  etc.
                 </p>
               </div>
               <div class="col-lg-6 py-3">
                 <div class="img-fluid py-3 text-center">
-                  <img src={about_frame} alt="about" />
+                  <img className="img-fluid" src={ourservice2} alt="about" />
                 </div>
               </div>
             </div>
           </div>
         ) : (
           <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center m-0">
               <div class="col-lg-6 py-3">
-                <h2 class="title-section">Our Company</h2>
+                <h2 class="title-section">Other Services</h2>
                 <div class="divider"></div>
 
                 <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua.
+                  As a recruitment agency, we provide staffing solutions for
+                  various positions in the Chat Support and Sales domains.
                 </p>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  clita kasd gubergren.
+                  Some of the job roles we recruit for in the Chat Support
+                  domain include Chat Support Executive, Customer Service
+                  Representative (Chat), Technical Support Executive (Chat), and
+                  Chat Operations Manager.
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laborum nisi saepe eum ipsa. Tempore dolore itaque est
-                  blanditiis libero fugiat, ea nostrum nam at tempora quis,
-                  facilis officiis nemo mollitia.
+                  In the Sales domain, we recruit for positions such as Sales
+                  Executive, Business Development Executive, Sales Manager, and
+                  Sales Operations Manager. Contact us to learn more about how
+                  we can assist with your recruitment needs in these areas.
                 </p>
               </div>
               <div class="col-lg-6 py-3">
                 <div class="img-fluid py-3 text-center">
-                  <img src={about_frame} alt="about" />
+                  <img src={ourservice3} className="img-fluid" alt="about" />
                 </div>
               </div>
             </div>
@@ -289,38 +333,25 @@ export default function Services() {
         )}
       </div>
 
-      <div class="container-fluid py-1 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-          <h3 className="text-center fw-bold text-primary">
-            Our Hiring Partners
-          </h3>
-          <div class="bg-white">
-            <div class="owl-carousel vendor-carousel">
-              <img className="img-fluid m-2" src={v1} alt="" />
-              <img className="img-fluid m-2" src={v2} alt="" />
-              <img className="img-fluid m-2" src={v3} alt="" />
-              <img className="img-fluid m-2" src={v4} alt="" />
-              <img className="img-fluid m-2" src={v5} alt="" />
-              <img className="img-fluid m-2" src={v6} alt="" />
-              <img className="img-fluid m-2" src={v7} alt="" />
-              <img className="img-fluid m-2" src={v8} alt="" />
-              <img className="img-fluid m-2" src={v9} alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <OurPartners />
 
-      <div class="container-fluid py-1 wow fadeInUp" data-wow-delay="0.1s">
+      <div
+        class="container-fluid py-1 my-3 wow fadeInUp servicesFeature"
+        data-wow-delay="0.1s"
+      >
         <div class="container py-1">
           <div
             class="section-title text-center position-relative pb-3 mb-5 mx-auto"
             style={{ maxWidth: "600px" }}
           >
-            <h5 class="fw-bold text-primary text-uppercase">Loremu ipsum</h5>
-            <h1 class="mb-0">
-              We Are Here to Grow Your Business Exponentially
-            </h1>
+            <h5 class="fw-bold text-primary text-uppercase">
+              Welcome to Amazon IT Solutions
+            </h5>
+            <h2 class="mb-0">
+              Connecting Top Talent with Innovative IT Companies
+            </h2>
           </div>
+
           <div class="row g-5">
             <div class="col-lg-4">
               <div class="row g-5">
@@ -329,12 +360,13 @@ export default function Services() {
                     class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                     style={{ width: "60px", height: "60px" }}
                   >
-                    <i class="fa fa-cubes text-white"></i>
+                    <i class="fa fa-users text-white"></i>
                   </div>
-                  <h4>Best In Industry</h4>
+                  <h4>Experienced Recruitment Team</h4>
                   <p class="mb-0">
-                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
-                    diam dolor
+                    We are a leading recruitment agency specializing in IT
+                    companies. Our experienced recruiters provide personalized
+                    services to both clients and candidates.
                   </p>
                 </div>
                 <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
@@ -342,12 +374,13 @@ export default function Services() {
                     class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                     style={{ width: "60px", height: "60px" }}
                   >
-                    <i class="fa fa-award text-white"></i>
+                    <i class="fa fa-map-marker-alt text-white"></i>
                   </div>
-                  <h4>Award Winning</h4>
+                  <h4>Wide Reach Across India</h4>
                   <p class="mb-0">
-                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
-                    diam dolor
+                    We are located in Hyderabad with expanded wings in
+                    Bangalore, Chennai, Vijayawada, and other major cities of
+                    India, connecting us with top talent across the country.
                   </p>
                 </div>
               </div>
@@ -373,12 +406,13 @@ export default function Services() {
                     class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                     style={{ width: "60px", height: "60px" }}
                   >
-                    <i class="fa fa-users-cog text-white"></i>
+                    <i class="fa fa-handshake text-white"></i>
                   </div>
-                  <h4>Professional Staff</h4>
+                  <h4>Consultative Recruitment Approach</h4>
                   <p class="mb-0">
-                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
-                    diam dolor
+                    Our consultative approach finds the best fit for clients by
+                    understanding their needs and our extensive network finds
+                    candidates with the right skills and values.
                   </p>
                 </div>
                 <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
@@ -386,12 +420,14 @@ export default function Services() {
                     class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                     style={{ width: "60px", height: "60px" }}
                   >
-                    <i class="fa fa-phone-alt text-white"></i>
+                    <i class="fa fa-clock text-white"></i>
                   </div>
                   <h4>24/7 Support</h4>
                   <p class="mb-0">
-                    Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et
-                    diam dolor
+                    Amazon IT Solutions provides seamless recruitment for
+                    clients and candidates, building long-term relationships to
+                    help clients build high-performing teams that drive their
+                    success
                   </p>
                 </div>
               </div>
@@ -400,7 +436,7 @@ export default function Services() {
         </div>
       </div>
 
-      <div class="page-section bg-light">
+      {/* <div class="page-section bg-light">
         <div class="container">
           <div class="text-center">
             <div class="subhead">Our services</div>
@@ -507,7 +543,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div> */}
+    </section>
   );
 }
