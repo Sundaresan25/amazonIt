@@ -5,9 +5,9 @@ import service3 from "../Assests/Images/services/service-3.svg";
 import about_frame from "../Assests/Images/about_frame.png";
 import bg_pattern from "../Assests/Images/bg_pattern.svg";
 import banner_image2 from "../Assests/Images/banner_image_2.svg";
-import blog1 from "../Assests/Images/blog/blog-1.jpg";
-import blog2 from "../Assests/Images/blog/blog-2.jpg";
+
 import blog3 from "../Assests/Images/blog/blog-3.jpg";
+import CountUp from "react-countup";
 
 import { Player } from "@lottiefiles/react-lottie-player";
 import { testimonials } from "../Utilities/Utilities";
@@ -143,7 +143,7 @@ export default function Home() {
           <div class="row align-items-center">
             <div class="col-lg-6 py-3 wow fadeInUp">
               <span class="subhead">About us</span>
-              <h2 class="title-section">The number #1 It Solutions Company</h2>
+              <h2 class="title-section">The number #1 IT Solutions Company</h2>
               <div class="divider"></div>
 
               <p>
@@ -395,15 +395,30 @@ export default function Home() {
                 <div class="count">
                   {" "}
                   <span class="fa fa-smile-o"></span>
-                  <p class="number">126</p>
-                  <h4>Happy Clients</h4>{" "}
+                  {/* <p class="number">126</p> */}
+                  <CountUp
+                    style={{ fontSize: "2rem", fontWeight: "600" }}
+                    class="number"
+                    start={0}
+                    end={126}
+                    duration={3}
+                  />
+                  <span style={{ fontSize: "2rem" }}>+</span>
+                  <h4>Happy Clients</h4>
                 </div>
               </div>
               <div class="col-md-4 ">
                 <div class="count">
                   {" "}
                   <span class="fa fa-smile-o"></span>
-                  <p class="number">100+</p>
+                  <CountUp
+                    style={{ fontSize: "2rem", fontWeight: "600" }}
+                    class="number"
+                    start={0}
+                    end={100}
+                    duration={3}
+                  />
+                  <span style={{ fontSize: "2rem" }}>+</span>
                   <h4>Placements</h4>{" "}
                 </div>
               </div>
@@ -411,7 +426,14 @@ export default function Home() {
                 <div class="count">
                   {" "}
                   <span class="fa fa-smile-o"></span>
-                  <p class="number">100+</p>
+                  <CountUp
+                    style={{ fontSize: "2rem", fontWeight: "600" }}
+                    class="number"
+                    start={0}
+                    end={100}
+                    duration={3}
+                  />
+                  <span style={{ fontSize: "2rem" }}>+</span>
                   <h4>Companies</h4>{" "}
                 </div>
               </div>
@@ -438,8 +460,10 @@ export default function Home() {
             <h2 class="mb-3 fw-bold text-primary">What Say Our Clients!!!</h2>
             <p class="mb-1">
               We pride ourselves on delivering exceptional service to our
-              clients. Here are some of the kind words they've had to say about
-              working with us:
+              clients.
+              <br />
+              Here are some of the kind words they've had to say about working
+              with us:
             </p>
           </div>
           <div class="owl-carousel row testimonial-carousel">

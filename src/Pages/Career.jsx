@@ -125,7 +125,7 @@ export const Career = () => {
           <Accordion
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
-            className="careersAcordian"
+            className="careersAcordian mt-2"
           >
             <AccordionSummary
               aria-controls="panel1d-content"

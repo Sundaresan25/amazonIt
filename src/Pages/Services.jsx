@@ -121,7 +121,7 @@ export default function Services() {
         <div class="row g-5">
           <div class="col-lg-7">
             <div class="section-title position-relative pb-3 mb-md-5">
-              <h5 class="fw-bold text-primary text-uppercase">IT Services</h5>
+              <h5 class="fw-bold text-primary text-uppercase">IT Solutions</h5>
               <h2 class="mb-0">
                 Amazon IT Solutions - Your Partner for IT Recruitment
               </h2>

@@ -27,7 +27,7 @@ body {
 }
 
 a {
-  color: #6c55f9;
+  color: #145b84;
   text-decoration: none;
   background-color: transparent;
 }
@@ -59,7 +59,7 @@ a:hover {
 
 /* Color systems */
 .bg-primary {
-  background-color: #6c55f9 !important;
+  background-color: #145b84 !important;
 }
 
 a.bg-primary:hover,
@@ -149,12 +149,12 @@ a.bg-dark:focus {
 }
 
 .text-primary {
-  color: #6c55f9 !important;
+  color: #145b84 !important;
 }
 
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #5d47eb !important;
+  color: #145b84 !important;
 }
 
 .text-accent {
@@ -243,7 +243,7 @@ a.text-dark:focus {
 }
 
 .border-primary {
-  border-color: #6c55f9 !important;
+  border-color: #145b84 !important;
 }
 
 .border-accent {
@@ -426,7 +426,7 @@ a.text-dark:focus {
 /* Buttons */
 .btn-primary {
   color: #fff;
-  background-color: #6c55f9;
+  background-color: #145b84;
   border-color: transparent;
 }
 
@@ -1152,6 +1152,7 @@ a.text-dark:focus {
 
 .navbar-light .navbar-nav .nav-link {
   color: rgba(100, 95, 136, 0.75);
+  font-weight: 600;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -1163,8 +1164,9 @@ a.text-dark:focus {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  font-weight: 500;
-  color: #6c55f9;
+  color: #145b84;
+  font-weight: 600;
+  
 }
 
 @media (min-width: 576px) {
@@ -1517,7 +1519,7 @@ a.text-dark:focus {
   width: 32px;
   height: 3px;
   border-radius: 40px;
-  background-color: #6c55f9;
+  background-color: #145b84;
 }
 
 .btn-split {
@@ -1538,7 +1540,7 @@ a.text-dark:focus {
   line-height: 32px;
   text-align: center;
   background-color: #fff;
-  color: #6c55f9;
+  color: #145b84;
 }
 
 .card-service {
@@ -1600,7 +1602,7 @@ a.text-dark:focus {
 
 .banner-seo-check {
   padding: 0;
-  background-image: radial-gradient(circle, #b262f8 15%, #5439f8);
+  background-image: radial-gradient(circle, #145b84 15%, #145b84);
   color: #fff;
 }
 
@@ -1719,7 +1721,7 @@ a.text-dark:focus {
 
 .banner-info {
   padding: 0;
-  background-color: #5439f8;
+  background-color: #145b84;
   color: rgba(255, 255, 255, 0.8);
 }
 

@@ -45,11 +45,19 @@
   margin: 0;
 }
 /* navbar */
-.navbar img {
-  width: 25%;
+.navbar .Logo {
+  width: 40%;
+}
+.navbar-scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* home */
+
+.home .heading1 {
+  font-weight: 600;
+  color: #145b84;
+}
 .home .testimonial {
   height: 45vh;
 }
@@ -81,8 +89,8 @@
 }
 
 @media screen and (max-width: 600px) {
-  .navbar img {
-    width: 60%;
+  .navbar .Logo {
+    width: 100%;
   }
   .footer .footerCon h5 {
     font-size: 20px;

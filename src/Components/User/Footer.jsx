@@ -127,16 +127,20 @@ export default function Footer() {
             </div>
             <div class="col-lg-3 py-3">
               <h5>Corporate Office</h5>
-              <p>
-                5/A Plot No, Door NO.1-99 8, 2, Image Gardens Road, Madhapur,
-                Hyderabad - 500081 (Image Gardens Line)
+              <p className="mb-0">
+                5/A Plot No, Door NO.1-99 8, 2,
+                <br /> Image Gardens Road,
+                <br /> Madhapur, Hyderabad - 500081
               </p>
-              <a href="#" class="footer-link">
-                +91 8121058121
-              </a>
-              <a href="#" class="footer-link">
-                support@amazonitsolutions.in
-              </a>
+              <br />
+              <p>
+                #01 JCMS Complex
+                <br />
+                8th Cross Tc Palya Main Road
+                <br /> Opposite Ideal Mart Ramamurthy Nagar
+                <br />
+                Bangalore 560016
+              </p>
             </div>
 
             {/* <div class="col-lg-3 py-3">

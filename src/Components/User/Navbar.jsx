@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Logo from "../../Assests/Images/Amazon-Logo1.png";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const location = useLocation();
@@ -33,20 +34,40 @@ export default function Navbar() {
       active: location.pathname.includes("/contact") ? true : false,
     },
   ];
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <nav
-        class="navbar navbar-expand-lg navbar-light bg-white "
+        class={`navbar navbar-expand-lg navbar-light bg-white ${
+          isScrolled ? "navbar-scrolled" : ""
+        }`}
         data-offset="500"
         style={{
           position: "sticky",
           top: "0",
-          zIndex: "1396",
+          zIndex: "9999",
         }}
       >
         <div class="container">
-          <div className="d-flex">
-            <Link to="/" class="navbar-brand">
+          <div className="d-flex justify-content-between">
+            <Link to="/" class="navbar-brand p-0 Logo">
               {/* Amazon<span class="text-primary"> IT Solutions</span> */}
               <img src={Logo} alt="" className="img-fluid" />
             </Link>
@@ -71,6 +92,7 @@ export default function Navbar() {
                   key={index}
                   to={menuitem.path}
                   className={`nav-link ${menuitem.active ? "active" : ""}`}
+                
                 >
                   {menuitem.label}
                 </Link>

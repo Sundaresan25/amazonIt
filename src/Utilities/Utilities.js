@@ -12,7 +12,7 @@ export const testimonials = [
     name: "Suresh Kumar",
     profession: "Software Developer",
     sentence:
-      "As a candidate, I was impressed with the professionalism and transparency displayed by Amazon IT Solutions throughout the recruitment process. They kept me informed every step of the way and ensured that I was a good fit for the company culture. I couldn't be happier with my new job",
+      "As a candidate, I was impressed with the professionalism and transparency displayed by Amazon IT Solutions throughout the recruitment process. They kept me informed every step of the way and ensured that I was a good fit for the company culture. I could be happier with my new job",
     picture: "",
   },
   {

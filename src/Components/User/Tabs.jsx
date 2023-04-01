@@ -24,9 +24,14 @@ export default function IconTabs(props) {
           className="rounded d-flex justify-content-center"
           TabIndicatorProps={{
             style: {
-              background: "var(--primary)",
+              background: "#145b84",
               top: top ? "0" : "",
               height: "0.25rem",
+            },
+          }}
+          sx={{
+            "& .css-h0q0iv-MuiButtonBase-root-MuiTab-root.Mui-selected": {
+              color: "#145b84",
             },
           }}
           variant={isSmallScreen ? "scrollable" : "standard"}

@@ -1,4 +1,4 @@
-import about1 from "../Assests/Images/Office Logo 1.jpg";
+import about1 from "../Assests/Images/Office Logo.jpg";
 import image1 from "../Assests/Images/image1.jpg";
 import image2 from "../Assests/Images/image2.jpg";
 
