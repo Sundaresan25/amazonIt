@@ -96,8 +96,12 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div class="row g-5" data-aos="fade-up">
-            <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+          <div class="row g-5">
+            <div
+              class="col-lg-6 wow slideInUp"
+              data-wow-delay="0.3s"
+              data-aos="fade-right"
+            >
               <form>
                 <div class="row g-3">
                   <div class="col-md-6">
@@ -108,7 +112,7 @@ export default function Contact() {
                       style={{ height: "55px" }}
                     />
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6" data-aos="fade-left">
                     <input
                       type="email"
                       class="form-control border-0 bg-light px-4"
