@@ -1,4 +1,14 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 export default function Contact() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out",
+      once: true,
+    });
+  }, []);
   return (
     <section className="contact">
       <header>
@@ -30,11 +40,13 @@ export default function Contact() {
             class="section-title text-center position-relative pb-3 mb-5 mx-auto"
             style={{ maxWidth: "600px" }}
           >
-            <h5 class="fw-bold text-primary text-uppercase">Contact Us</h5>
+            <h5 class="fw-bold text-primary text-uppercase" data-aos="fade-up">
+              Contact Us
+            </h5>
             <h2 class="mb-0">If You Have Any Query, Feel Free To Contact Us</h2>
           </div>
           <div class="row g-5 mb-5">
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-right">
               <div
                 class="d-flex align-items-center wow fadeIn"
                 data-wow-delay="0.1s"
@@ -49,7 +61,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-up">
               <div
                 class="d-flex align-items-center wow fadeIn"
                 data-wow-delay="0.4s"
@@ -66,7 +78,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-left">
               <div
                 class="d-flex align-items-center wow fadeIn"
                 data-wow-delay="0.8s"
@@ -84,7 +96,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div class="row g-5">
+          <div class="row g-5" data-aos="fade-up">
             <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
               <form>
                 <div class="row g-3">

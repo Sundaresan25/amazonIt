@@ -92,7 +92,6 @@ export default function Navbar() {
                   key={index}
                   to={menuitem.path}
                   className={`nav-link ${menuitem.active ? "active" : ""}`}
-                
                 >
                   {menuitem.label}
                 </Link>

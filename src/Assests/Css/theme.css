@@ -1166,7 +1166,8 @@ a.text-dark:focus {
 .navbar-light .navbar-nav .nav-link.active {
   color: #145b84;
   font-weight: 600;
-  
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
 }
 
 @media (min-width: 576px) {

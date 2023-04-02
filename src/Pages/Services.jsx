@@ -2,7 +2,7 @@ import IconTabs from "../Components/User/Tabs";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import DirectionsIcon from "@mui/icons-material/Directions";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
-import React from "react";
+import React, { useEffect } from "react";
 
 import service1 from "../Assests/Images/service1.jpg";
 import service2 from "../Assests/Images/service2.jpg";
@@ -22,6 +22,8 @@ import pythonImage from "../Assests/Images/program/python.png";
 import reactImage from "../Assests/Images/program/react.png";
 import iosImage from "../Assests/Images/program/smartphone.png";
 import aspnetImage from "../Assests/Images/program/web.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Services() {
   const tabs = [
@@ -95,6 +97,13 @@ export default function Services() {
     setTabValue(newValue);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out",
+      once: true,
+    });
+  }, []);
   return (
     <section className="services">
       <header>
@@ -119,7 +128,7 @@ export default function Services() {
 
       <div class="container py-5 serviceCon">
         <div class="row g-5">
-          <div class="col-lg-7">
+          <div class="col-lg-7" data-aos="fade-right">
             <div class="section-title position-relative pb-3 mb-md-5">
               <h5 class="fw-bold text-primary text-uppercase">IT Solutions</h5>
               <h2 class="mb-0">
@@ -159,7 +168,11 @@ export default function Services() {
               </div>
             </div>
           </div>
-          <div class="col-lg-5" style={{ minHeight: "500px" }}>
+          <div
+            class="col-lg-5"
+            style={{ minHeight: "500px" }}
+            data-aos="fade-left"
+          >
             <div class="position-relative h-100">
               <img
                 class="position-absolute w-100 h-100 rounded wow zoomIn"
@@ -228,7 +241,10 @@ export default function Services() {
                 </div>
               </div>
               <div>
-                <h2 class=" text-center fw-bold text-primary my-3 ">
+                <h2
+                  class=" text-center fw-bold text-primary my-3 "
+                  data-aos="fade-up"
+                >
                   Discover what you're looking for
                 </h2>
                 <div className="row">
@@ -338,6 +354,7 @@ export default function Services() {
       <div
         class="container-fluid py-1 my-3 wow fadeInUp servicesFeature"
         data-wow-delay="0.1s"
+        data-aos="fade-up"
       >
         <div class="container py-1">
           <div

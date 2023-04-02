@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import about1 from "../Assests/Images/Office Logo.jpg";
 import image1 from "../Assests/Images/image1.jpg";
 import image2 from "../Assests/Images/image2.jpg";
@@ -5,8 +6,17 @@ import image2 from "../Assests/Images/image2.jpg";
 import { teams } from "../Utilities/Utilities";
 
 import { Player } from "@lottiefiles/react-lottie-player";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function About() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out",
+      once: true,
+    });
+  }, []);
   return (
     <section className="about">
       <header>
@@ -34,7 +44,7 @@ export default function About() {
       >
         <div class="container py-5">
           <div class="row g-5">
-            <div class="col-lg-7">
+            <div class="col-lg-7" data-aos="fade-right">
               <div class="section-title position-relative pb-3 mb-md-2">
                 <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
                 <h2 class="mb-0">Welcome to Amazon IT Solutions</h2>
@@ -88,7 +98,7 @@ export default function About() {
                 Request A Quote
               </a> */}
             </div>
-            <div class="col-lg-5 ">
+            <div class="col-lg-5 " data-aos="fade-left">
               <div class="position-relative h-100">
                 <img
                   class="img-fluid w-100 h-100 rounded wow zoomIn"
@@ -105,7 +115,7 @@ export default function About() {
       <div class="page-section p-0 m-0 aboutCon2" id="about">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-6 py-3 wow fadeInUp">
+            <div class="col-lg-6 py-3 wow fadeInUp" data-aos="fade-up">
               <span class="subhead">About us</span>
               <h2 class="title-section">The number #1 It Solutions Company</h2>
               <div class="divider"></div>
@@ -144,12 +154,12 @@ export default function About() {
       <div class="page-section aboutCon3">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-6 py-3">
+            <div class="col-lg-6 py-3" data-aos="fade-right">
               <div class="img-fluid py-3 text-center">
                 <img src={image1} className="img-fluid" alt="about" />
               </div>
             </div>
-            <div class="col-lg-6 py-3">
+            <div class="col-lg-6 py-3" data-aos="fade-left">
               <h2 class="title-section">Our Mission</h2>
               <div class="divider"></div>
 
@@ -168,7 +178,7 @@ export default function About() {
                 career opportunities that match their skills and aspirations.
               </p>
             </div>
-            <div class="col-lg-6 py-3">
+            <div class="col-lg-6 py-3" data-aos="fade-up">
               <h2 class="title-section">Our Vision</h2>
               <div class="divider"></div>
               <p>
@@ -185,7 +195,7 @@ export default function About() {
                 our clients and help them succeed in the digital age.
               </p>
             </div>
-            <div class="col-lg-6 py-3">
+            <div class="col-lg-6 py-3" data-aos="fade-up">
               <div class="img-fluid py-3 text-center">
                 <img src={image2} className="img-fluid" alt="about" />
               </div>

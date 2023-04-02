@@ -17,6 +17,9 @@ import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { OurPartners } from "../Components/User/OurPartners";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
   const responsive = {
@@ -38,6 +41,14 @@ export default function Home() {
       items: 1,
     },
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out",
+      once: true,
+    });
+  }, []);
 
   return (
     <section className="home">
@@ -83,7 +94,7 @@ export default function Home() {
       <div class="page-section">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-up">
               <div class="card-service wow fadeInUp">
                 <div class="header">
                   <img src={service1} alt="" />
@@ -100,7 +111,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-up">
               <div class="card-service wow fadeInUp">
                 <div class="header">
                   <img src={service2} alt="" />
@@ -117,7 +128,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-up">
               <div class="card-service wow fadeInUp">
                 <div class="header">
                   <img src={service3} alt="" />
@@ -141,7 +152,7 @@ export default function Home() {
       <div class="page-section" id="about">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-6 py-3 wow fadeInUp">
+            <div class="col-lg-6 py-3 wow fadeInUp" data-aos="fade-right">
               <span class="subhead">About us</span>
               <h2 class="title-section">The number #1 IT Solutions Company</h2>
               <div class="divider"></div>
@@ -162,7 +173,7 @@ export default function Home() {
                 Read More
               </Link>
             </div>
-            <div class="col-lg-6 py-3 wow fadeInRight">
+            <div class="col-lg-6 py-3 wow fadeInRight" data-aos="fade-left">
               <div class="img-fluid py-3 text-center">
                 {/* <img src={about_frame} alt="" />
                  */}

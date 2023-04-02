@@ -11,6 +11,8 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import blog3 from "../Assests/Images/blog/blog-3.jpg";
 import { Player } from "@lottiefiles/react-lottie-player";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -53,6 +55,14 @@ export const Career = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out",
+      once: true,
+    });
+  }, []);
   return (
     <section className="careers">
       <header>
@@ -78,14 +88,14 @@ export const Career = () => {
       <div class="container-fluid py-5 careersCon">
         <div class="container py-5">
           <div class="row align-items-center">
-            <div class="col-lg-5">
+            <div class="col-lg-5" data-aos="fade-right">
               <img
                 class="img-fluid rounded mb-4 mb-lg-0"
                 src={career1}
                 alt=""
               />
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7" data-aos="fade-left">
               <div class="text-left mb-4">
                 <h5
                   class="text-primary text-uppercase mb-3"
@@ -250,6 +260,7 @@ export const Career = () => {
           <div
             class="container-fluid py-md-5 wow fadeInUp"
             data-wow-delay="0.1s"
+            data-aos="fade-up"
           >
             <div class="container py-md-5">
               <div
