@@ -51,12 +51,13 @@ export default function Contact() {
                 class="d-flex align-items-center wow fadeIn"
                 data-wow-delay="0.1s"
               >
-                <div class="bg-primary d-flex align-items-center justify-content-center rounded icon">
+                <div class="col-3 bg-primary d-flex align-items-center justify-content-center rounded icon">
                   <i class="fa fa-phone-alt text-white"></i>
                 </div>
                 <div class="ps-4">
                   <h5 class="mb-2">Call to ask any question</h5>
-                  <h4 class="text-primary mb-0">+91 8121058121 </h4>
+                  <small class="text-primary mb-0">+91 8121058121 </small>
+                  <small class="text-primary mb-0">+91 9989409959 </small>
                 </div>
               </div>
             </div>
@@ -66,15 +67,15 @@ export default function Contact() {
                 class="d-flex align-items-center wow fadeIn"
                 data-wow-delay="0.4s"
               >
-                <div class="bg-primary d-flex align-items-center justify-content-center rounded icon">
+                <div class="col-3 bg-primary d-flex align-items-center justify-content-center rounded icon">
                   <i class="fa fa-envelope-open text-white"></i>
                 </div>
                 <div class="ps-4">
                   <h5 class="mb-2">Email to get free quote</h5>
-                  <h4 class="text-primary mb-0">
+                  <small class="text-primary mb-0">
                     {" "}
                     support@amazonitsolutions.in
-                  </h4>
+                  </small>
                 </div>
               </div>
             </div>
@@ -83,15 +84,16 @@ export default function Contact() {
                 class="d-flex align-items-center wow fadeIn"
                 data-wow-delay="0.8s"
               >
-                <div class="bg-primary d-flex align-items-center justify-content-center rounded icon">
+                <div class="col-3 p-0 bg-primary d-flex align-items-center justify-content-center rounded icon">
                   <i class="fa fa-map-marker-alt text-white"></i>
                 </div>
                 <div class="ps-4">
                   <h5 class="mb-2">Visit our office</h5>
-                  <h4 class="text-primary mb-0">
+                  <small class="text-primary mb-0">
                     {" "}
-                    Dno:1-99,ImageGardens Road,Madhapur, Hyderabad
-                  </h4>
+                    5/A Plot No, Door NO.1-99 8, 2, Image Gardens Road,
+                    Madhapur, Hyderabad - 500081.
+                  </small>
                 </div>
               </div>
             </div>

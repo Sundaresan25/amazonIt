@@ -130,16 +130,16 @@ export default function Footer() {
               <p className="mb-0">
                 5/A Plot No, Door NO.1-99 8, 2,
                 <br /> Image Gardens Road,
-                <br /> Madhapur, Hyderabad - 500081
+                <br /> Madhapur, Hyderabad - 500081.
               </p>
               <br />
               <p>
-                #01 JCMS Complex
+                #01 JCMS Complex,
                 <br />
-                8th Cross Tc Palya Main Road
-                <br /> Opposite Ideal Mart Ramamurthy Nagar
+                8th Cross Tc Palya Main Road,
+                <br /> Opposite Ideal Mart Ramamurthy Nagar,
                 <br />
-                Bangalore 560016
+                Bangalore 560016.
               </p>
             </div>
 

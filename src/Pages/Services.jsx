@@ -92,7 +92,9 @@ export default function Services() {
     },
   ];
 
-  const [tabValue, setTabValue] = React.useState(0);
+  const [tabValue, setTabValue] = React.useState(
+    parseInt(sessionStorage.getItem("service-type")) || 0
+  );
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };

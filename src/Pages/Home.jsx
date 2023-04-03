@@ -105,7 +105,13 @@ export default function Home() {
                     We provide a variety of IT job opportunities for aspiring
                     candidates
                   </p>
-                  <Link to="/services" class="btn btn-primary">
+                  <Link
+                    to="/services"
+                    class="btn btn-primary"
+                    onClick={() => {
+                      sessionStorage.setItem("school-type", 0);
+                    }}
+                  >
                     Read More
                   </Link>
                 </div>
@@ -122,7 +128,11 @@ export default function Home() {
                     We offer a range of non-IT job opportunities to help you
                     start your career
                   </p>
-                  <Link to="/services" class="btn btn-primary">
+                  <Link
+                    to="/services"
+                    class="btn btn-primary"
+                    onClick={() => sessionStorage.setItem("service-type", 1)}
+                  >
                     Read More
                   </Link>
                 </div>
@@ -139,7 +149,11 @@ export default function Home() {
                     We provide efficient and reliable chat support job
                     opportunities for job seekers
                   </p>
-                  <Link to="/services" class="btn btn-primary">
+                  <Link
+                    to="/services"
+                    class="btn btn-primary"
+                    onClick={() => sessionStorage.setItem("service-type", 2)}
+                  >
                     Read More
                   </Link>
                 </div>
