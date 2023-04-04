@@ -54,9 +54,8 @@ export default function About() {
                 services to businesses of all sizes. Our team of experienced
                 professionals specializes in developing custom software
                 solutions, providing cloud computing services, and offering IT
-                staffing and recruitment services. With over 10 years of
-                experience, we have a proven track record of delivering
-                exceptional results for our clients.
+                staffing and recruitment services. we have a proven track record
+                of delivering exceptional results for our clients.
               </p>
               <div class="row g-0 mb-3">
                 <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
@@ -160,7 +159,7 @@ export default function About() {
               </div>
             </div>
             <div class="col-lg-6 py-3" data-aos="fade-left">
-              <h2 class="title-section">Our Mission</h2>
+              <h2 class="text-primary">Our Mission</h2>
               <div class="divider"></div>
 
               <p>
@@ -179,7 +178,7 @@ export default function About() {
               </p>
             </div>
             <div class="col-lg-6 py-3" data-aos="fade-up">
-              <h2 class="title-section">Our Vision</h2>
+              <h2 class="text-primary">Our Vision</h2>
               <div class="divider"></div>
               <p>
                 At Amazon IT Solutions, our vision is to become the go-to
@@ -199,6 +198,47 @@ export default function About() {
               <div class="img-fluid py-3 text-center">
                 <img src={image2} className="img-fluid" alt="about" />
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid py-5">
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <img
+                class="img-fluid rounded mb-4 mb-lg-0"
+                src={image1}
+                alt=""
+                data-aos="fade-up"
+              />
+            </div>
+            <div class="col-lg-8">
+              <div class="text-left mb-4">
+                <h5
+                  class="text-primary text-uppercase mb-3"
+                  style={{ letterSpacing: "5px" }}
+                  data-aos="fade-up"
+                >
+                  Our CEO Says
+                </h5>
+                <h2>"Bridging the gap between talent and opportunity."</h2>
+              </div>
+              <p data-aos="fade-up">
+                As CEO of Amazon IT Solutions, I am confident in our ability to
+                deliver outstanding results for our clients. We understand the
+                importance of finding the perfect fit, and we work tirelessly to
+                ensure that every placement is a success. Our industry
+                expertise, coupled with our extensive network of candidates,
+                allows us to provide tailored solutions that meet the unique
+                needs of each organization we work with. We believe that our
+                success is a reflection of the exceptional talent we work with,
+                and we are committed to fostering a culture of diversity,
+                inclusivity, and excellence. We strive to create a supportive
+                and collaborative environment where everyone can thrive and
+                reach their full potential.
+              </p>
             </div>
           </div>
         </div>
