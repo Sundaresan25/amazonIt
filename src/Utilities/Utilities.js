@@ -1,5 +1,12 @@
-import Team1 from "../Assests/Images/team-1.jpg";
+import Team1 from "../Assests/Images/team-1.jpeg";
+import Team2 from "../Assests/Images/team-2.jpg";
+import Team3 from "../Assests/Images/team-3.jpg";
+import Team4 from "../Assests/Images/team-4.jpg";
+import Team5 from "../Assests/Images/team-5.jpg";
+import Team6 from "../Assests/Images/team-6.jpg";
+import Team7 from "../Assests/Images/team-7.png";
 
+import Team8 from "../Assests/Images/team-8.jpg";
 export const testimonials = [
   {
     name: "John Doe",
@@ -26,23 +33,52 @@ export const testimonials = [
 
 export const teams = [
   {
-    name: "Full Name",
-    designation: "Designation",
+    name: "Lakshmi Sanjana",
+    designation: " Sr Hr Executive",
     Profile: Team1,
   },
   {
-    name: "Full Name",
-    designation: "Designation",
-    Profile: Team1,
+    name: "K.Samsonbabu",
+    designation: " Sr. Graphic Designer.",
+    Profile: Team2,
   },
   {
-    name: "Full Name",
-    designation: "Designation",
-    Profile: Team1,
+    name: "Dinesh Kumar",
+    designation: "Sr. Devops Engineer & Corporate Trainer.",
+    Profile: Team3,
+  },
+
+  {
+    name: "Sneha Kumari bhadani",
+    designation: "Software developer",
+    Profile: Team4,
+  },
+
+  {
+    name: "Chakravarthy Devarakonda",
+    designation: " HR Manager.",
+    Profile: Team5,
+  },
+
+  {
+    name: "Esub Vali Sayyed.",
+    designation: "React Js Sr. Full stack Developer",
+    Profile: Team6,
   },
   {
-    name: "Full Name",
-    designation: "Designation",
-    Profile: Team1,
+    name: "Charan . R",
+    designation: "React Js Sr.Software Engineer.",
+    Profile: Team7,
+  },
+  {
+    name: "Dinesh Raju Konduru.",
+    designation: "Sr. Data Architect.",
+    Profile: Team8,
+  },
+
+  {
+    name: "Sundar",
+    designation: "React Js Developer",
+    Profile: Team7,
   },
 ];

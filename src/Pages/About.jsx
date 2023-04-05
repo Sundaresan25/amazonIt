@@ -116,7 +116,7 @@ export default function About() {
           <div class="row align-items-center">
             <div class="col-lg-6 py-3 wow fadeInUp" data-aos="fade-up">
               <span class="subhead">About us</span>
-              <h2 class="title-section">The number #1 It Solutions Company</h2>
+              <h2 class="title-section">The number #1 IT Solutions Company</h2>
               <div class="divider"></div>
 
               <p>
@@ -225,7 +225,7 @@ export default function About() {
                 </h5>
                 <h2>"Bridging the gap between talent and opportunity."</h2>
               </div>
-              <p data-aos="fade-up">
+              <p data-aos="fade-up" style={{ textAlign: "justify" }}>
                 As CEO of Amazon IT Solutions, I am confident in our ability to
                 deliver outstanding results for our clients. We understand the
                 importance of finding the perfect fit, and we work tirelessly to
@@ -244,19 +244,19 @@ export default function About() {
         </div>
       </div>
 
-      {/* <div class="container-xxl py-5">
+      <div class="container-xxl py-5 ">
         <div class="container px-lg-5">
           <div
             class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
             data-wow-delay="0.1s"
             style={{ maxWidth: "600px" }}
           >
-            <h1 class="mb-3">Our Team Members</h1>
-            <p class="mb-1">
+            <h2 class="mb-3 text-primary">Our Team Members</h2>
+            {/* <p class="mb-1">
               Vero justo sed sed vero clita amet. Et justo vero sea diam elitr
               amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero
               elitr sit clita.
-            </p>
+            </p> */}
           </div>
           <div class="row g-4">
             {teams.map((data, index) => (
@@ -265,7 +265,7 @@ export default function About() {
                 data-wow-delay="0.1s"
                 key={index}
               >
-                <div class="team-item border-top border-5 border-primary rounded shadow overflow-hidden">
+                <div class="team-item border-top border-5 border-primary rounded shadow overflow-hidden teamCon">
                   <div class="text-center p-4">
                     <img
                       class="img-fluid rounded-circle mb-4"
@@ -275,7 +275,7 @@ export default function About() {
                     <h5 class="fw-bold mb-1">{data.name}</h5>
                     <small>{data.designation}</small>
                   </div>
-                  <div class="d-flex justify-content-center bg-primary p-3">
+                  {/* <div class="d-flex justify-content-center bg-primary p-3">
                     <a class="btn btn-square text-primary bg-white m-1" href="">
                       <i class="fab fa-facebook-f"></i>
                     </a>
@@ -285,13 +285,13 @@ export default function About() {
                     <a class="btn btn-square text-primary bg-white m-1" href="">
                       <i class="fab fa-instagram"></i>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div> */}
+      </div>
       {/* <div class="container-xxl py-5">
         <div class="container px-lg-5">
           <div

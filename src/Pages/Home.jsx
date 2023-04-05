@@ -11,17 +11,21 @@ import CountUp from "react-countup";
 
 import { Player } from "@lottiefiles/react-lottie-player";
 import { testimonials } from "../Utilities/Utilities";
-import { Link } from "react-router-dom";
-// import OwlCarousel from "react-owl-carousel";
-// import "owl.carousel/dist/assets/owl.carousel.css";
+import { Link, useLocation } from "react-router-dom";
+import carousel1 from "../Assests/Images/carousel-1.jpg";
+import carousel2 from "../Assests/Images/carousel-2.jpg";
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { OurPartners } from "../Components/User/OurPartners";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Logo from "../Assests/Images/Amazon-Logo1.png";
 
 export default function Home() {
+  const location = useLocation();
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -42,6 +46,53 @@ export default function Home() {
     },
   };
 
+  const paths = [
+    {
+      path: "/",
+      label: "Home",
+      active: location.pathname === "/" ? true : false,
+    },
+    {
+      path: "/services",
+      label: "Services",
+      active: location.pathname.includes("/services") ? true : false,
+    },
+    {
+      path: "/careers",
+      label: "Careers ",
+      active: location.pathname.includes("/careers") ? true : false,
+    },
+    {
+      path: "/about",
+      label: "About",
+      active: location.pathname.includes("/about") ? true : false,
+    },
+
+    {
+      path: "/contact",
+      label: "Contact Us",
+      active: location.pathname.includes("/contact") ? true : false,
+    },
+  ];
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -52,7 +103,7 @@ export default function Home() {
 
   return (
     <section className="home">
-      <header>
+      {/* <header>
         <div class="container">
           <div class="page-banner home-banner">
             <div class="row align-items-center flex-wrap-reverse h-100">
@@ -74,7 +125,7 @@ export default function Home() {
               <div class="col-md-6 py-5 wow zoomIn">
                 <div class="img-fluid text-center">
                   {/* <img src={banner_image1} alt="" /> */}
-
+      {/* 
                   <Player
                     src="https://assets4.lottiefiles.com/packages/lf20_ebbfp58m.json"
                     background="transparent"
@@ -90,7 +141,86 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </header>
+      </header> */}{" "}
+      {/* */}
+      <div class="container-fluid position-relative p-0 homeCon">
+        <div
+          id="header-carousel"
+          class="carousel slide carousel-fade "
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="w-100" src={carousel1} alt="image" />
+              <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style={{ maxWidth: "900px" }}>
+                  <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                    Revolutionize Your IT Solutions
+                  </h5>
+                  <h1 class="display-1 text-white mb-md-4 animated zoomIn">
+                    Digital Innovation for Your Business Success
+                  </h1>
+                  <Link
+                    to="/services"
+                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                  >
+                    Our Services
+                  </Link>
+                  <Link
+                    to="/contact"
+                    class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="w-100" src={carousel2} alt="Image" />
+              <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style={{ maxWidth: "900px" }}>
+                  <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                    Creative & Innovative
+                  </h5>
+                  <h1 class="display-1 text-white mb-md-4 animated zoomIn">
+                    Creative & Innovative Digital Solution
+                  </h1>
+                  <Link
+                    to="/services"
+                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                  >
+                    Our Services
+                  </Link>
+                  <Link
+                    to="/contact"
+                    class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
       <div class="page-section">
         <div class="container">
           <div class="row">
@@ -162,7 +292,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div class="page-section" id="about">
         <div class="container">
           <div class="row align-items-center">
@@ -203,7 +332,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* <div class="page-section bg-light">
         <div class="container">
           <div class="text-center wow fadeInUp">
@@ -312,7 +440,6 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-
       <div
         class="container-fluid py-5 wow fadeInUp whyChooseUs"
         data-wow-delay="0.1s"
@@ -408,7 +535,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div class="page-section banner-seo-check">
         <div
           class="wrap bg-image"
@@ -474,7 +600,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div class="container-xxl py-5 wow fadeInUp client" data-wow-delay="0.1s">
         <div class="container px-lg-5">
           <div
@@ -546,7 +671,6 @@ export default function Home() {
         </div>
       </div>
       <OurPartners />
-
       <div class="page-section banner-info infoCover">
         <div
           class="wrap bg-image"
@@ -604,7 +728,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* <div class="page-section">
         <div class="container">
           <div class="text-center wow fadeInUp">

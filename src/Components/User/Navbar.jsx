@@ -54,7 +54,7 @@ export default function Navbar() {
   }, []);
   return (
     <>
-      <nav
+      {/* <nav
         class={`navbar navbar-expand-lg navbar-light bg-white ${
           isScrolled ? "navbar-scrolled" : ""
         }`}
@@ -69,7 +69,7 @@ export default function Navbar() {
           <div className="d-flex justify-content-between">
             <Link to="/" class="navbar-brand p-0 Logo">
               {/* Amazon<span class="text-primary"> IT Solutions</span> */}
-              <img src={Logo} alt="" className="img-fluid" />
+      {/* <img src={Logo} alt="" className="img-fluid" />
             </Link>
 
             <button
@@ -95,9 +95,9 @@ export default function Navbar() {
                 >
                   {menuitem.label}
                 </Link>
-              ))}
+              ))} */}
 
-              {/* <div class="nav-item dropdown">
+      {/* <div class="nav-item dropdown">
                 <a
                   href="#"
                   class="nav-link dropdown-toggle"
@@ -123,10 +123,10 @@ export default function Navbar() {
                   </a>
                 </div>
               </div> */}
-            </div>
-          </div>
+      {/* </div>
+          </div> */}
 
-          {/* <div class="navbar-collapse collapse" id="navbarContent">
+      {/* <div class="navbar-collapse collapse" id="navbarContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <Link class="nav-link" to="/">
@@ -148,7 +148,7 @@ export default function Navbar() {
                   Blog
                 </Link>
               </li> */}
-          {/* <li class="nav-item">
+      {/* <li class="nav-item">
                 <Link class="nav-link" to="/career">
                   Career
                 </Link>
@@ -160,6 +160,102 @@ export default function Navbar() {
               </li>
             </ul>
           </div> */}
+      {/* </div>
+      </nav> */}
+
+      <nav
+        class={`navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0 ${
+          location.pathname !== "/" ? "navbar-light bg-white" : "navbar-dark"
+        }`}
+        style={
+          location.pathname !== "/"
+            ? {
+                position: "sticky",
+                top: "0",
+                zIndex: "9999",
+              }
+            : {}
+        }
+      >
+        <Link to="/" class="navbar-brand p-0 Logo">
+          {/* Amazon<span class="text-primary"> IT Solutions</span> */}
+          <img src={Logo} alt="" className="img-fluid" />
+        </Link>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0">
+            {paths.map((menuitem, index) => (
+              <Link
+                key={index}
+                to={menuitem.path}
+                className={`nav-link ${menuitem.active ? "active" : ""}`}
+              >
+                {menuitem.label}
+              </Link>
+            ))}
+            {/* <a href="index.html" class="nav-item nav-link active">
+              Home
+            </a>
+            <a href="about.html" class="nav-item nav-link">
+              About
+            </a>
+            <a href="service.html" class="nav-item nav-link">
+              Services
+            </a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                Blog
+              </a>
+              <div class="dropdown-menu m-0">
+                <a href="blog.html" class="dropdown-item">
+                  Blog Grid
+                </a>
+                <a href="detail.html" class="dropdown-item">
+                  Blog Detail
+                </a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                Pages
+              </a>
+              <div class="dropdown-menu m-0">
+                <a href="price.html" class="dropdown-item">
+                  Pricing Plan
+                </a>
+                <a href="feature.html" class="dropdown-item">
+                  Our features
+                </a>
+                <a href="team.html" class="dropdown-item">
+                  Team Members
+                </a>
+                <a href="testimonial.html" class="dropdown-item">
+                  Testimonial
+                </a>
+                <a href="quote.html" class="dropdown-item">
+                  Free Quote
+                </a>
+              </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">
+              Contact
+            </a> */}
+          </div>
         </div>
       </nav>
     </>

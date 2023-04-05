@@ -34,7 +34,7 @@ export default function Footer() {
   const socialMedia = [
     {
       name: "Facebook",
-      url: "",
+      url: "https://www.facebook.com/profile.php?id=100091522183109&is_tour_completed=true",
       logo: "mai-logo-facebook-f",
     },
     {
@@ -44,7 +44,7 @@ export default function Footer() {
     },
     {
       name: "WhatsApp",
-      url: "",
+      url: "https://wa.me/message/QA5EQSULC22MM1",
       logo: "mai-logo-whatsapp",
     },
     {
@@ -54,7 +54,7 @@ export default function Footer() {
     },
     {
       name: "Youtube",
-      url: "",
+      url: "https://www.youtube.com/channel/UCKyKyxpcwMrZVpjI3ypp1xQ",
       logo: "mai-logo-youtube",
     },
   ];
@@ -117,10 +117,10 @@ export default function Footer() {
               <ul class="footer-menu">
                 {socialMedia.map((data, index) => (
                   <li key={index}>
-                    <Link to={data.url}>
+                    <a href={data.url} target="_blank">
                       {" "}
                       <span class={data.logo}></span> {data.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
