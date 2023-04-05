@@ -164,9 +164,7 @@ export default function Navbar() {
       </nav> */}
 
       <nav
-        class={`navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0 ${
-          location.pathname !== "/" ? "navbar-light bg-white" : "navbar-dark"
-        }`}
+        class={`navbar navbar-expand-lg navbar-light bg-white px-5 py-3 py-lg-0 `}
         style={
           location.pathname !== "/"
             ? {

@@ -1,4 +1,4 @@
-import Team1 from "../Assests/Images/team-1.jpeg";
+import Team1 from "../Assests/Images/team-1.jpg";
 import Team2 from "../Assests/Images/team-2.jpg";
 import Team3 from "../Assests/Images/team-3.jpg";
 import Team4 from "../Assests/Images/team-4.jpg";
