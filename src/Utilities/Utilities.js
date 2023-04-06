@@ -67,7 +67,7 @@ export const teams = [
 
   {
     name: "Sneha Kumari bhadani",
-    designation: "Software developer",
+    designation: "Software Engineer",
     Profile: Team4,
   },
 

@@ -297,8 +297,8 @@ export default function Home() {
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 py-3 wow fadeInUp" data-aos="fade-right">
-              <span class="subhead">About us</span>
-              <h2 class="title-section">The number #1 IT Solutions Company</h2>
+              <h2 class="subhead">About us</h2>
+              {/* <h2 class="title-section">The number #1 IT Solutions Company</h2> */}
               <div class="divider"></div>
 
               <p>
