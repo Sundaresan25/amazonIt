@@ -12,7 +12,12 @@ export default function Contact() {
     message: "",
   });
 
-  const [error, setError] = React.useState("");
+  const [error, setError] = React.useState({
+    name: "",
+    subject: "",
+    email: "",
+    message: "",
+  });
 
   function onChangeHandler(e) {
     setFormData((prevState) => {
@@ -27,11 +32,17 @@ export default function Contact() {
     e.preventDefault();
     if (
       formData.name === "" ||
-      formData.email === "" ||
+      !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(formData.email) ||
       formData.subject === "" ||
       formData.message === ""
     ) {
-      setError("All fields are required");
+      setError({
+        name: formData.name === "" ? "Name is required" : "",
+        email:
+          formData.email === "" ? "Email is required" : "Invalid email format",
+        subject: formData.subject === "" ? "Subject is required" : "",
+        message: formData.message === "" ? "Message is required" : "",
+      });
     } else {
       toast.success("Thanks for contacting us, soon we will reach out to you.");
       setFormData({
@@ -40,7 +51,12 @@ export default function Contact() {
         email: "",
         message: "",
       });
-      setError("");
+      setError({
+        name: "",
+        subject: "",
+        email: "",
+        message: "",
+      });
     }
   }
 
@@ -173,6 +189,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={onChangeHandler}
                     />
+                    <small style={{ color: "red" }}>{error?.name}</small>
                   </div>
                   <div class="col-md-6" data-aos="fade-left">
                     <input
@@ -184,6 +201,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={onChangeHandler}
                     />
+                    <small style={{ color: "red" }}>{error?.email}</small>
                   </div>
                   <div class="col-12">
                     <input
@@ -195,6 +213,7 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={onChangeHandler}
                     />
+                    <small style={{ color: "red" }}>{error?.subject}</small>
                   </div>
                   <div class="col-12">
                     <textarea
@@ -205,10 +224,9 @@ export default function Contact() {
                       value={formData.message}
                       onChange={onChangeHandler}
                     ></textarea>
+                    <small style={{ color: "red" }}>{error?.message}</small>
                   </div>
-                  <div>
-                    <p style={{ color: "red" }}>{error}</p>
-                  </div>
+
                   <div class="col-12">
                     <button
                       class="btn btn-primary w-100 py-3"
