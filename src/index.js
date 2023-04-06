@@ -12,7 +12,7 @@ root.render(
     <BrowserRouter>
       <Toaster
         style={{ zIndex: "999999" }}
-        position="bottom-right"
+        position="bottom-left"
         reverseOrder={false}
         duration={5000}
         toastOptions={{
