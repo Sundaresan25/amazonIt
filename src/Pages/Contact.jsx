@@ -33,7 +33,7 @@ export default function Contact() {
     ) {
       setError("All fields are required");
     } else {
-      toast.success("Message sent successfully");
+      toast.success("Thanks for contacting us, soon we will reach out to you.");
       setFormData({
         name: "",
         subject: "",
