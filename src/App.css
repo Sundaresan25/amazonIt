@@ -52,6 +52,12 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* name */
+.nameCon img {
+  object-fit: cover;
+  height: 300px;
+}
+
 /* home */
 
 .navbar-dark .navbar-nav .nav-link {
@@ -338,4 +344,8 @@
     width: 30px;
     height: 30px;
   }
+}
+
+.btn-outline-light:hover {
+  filter: blur(0.7px);
 }

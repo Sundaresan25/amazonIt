@@ -33,10 +33,27 @@ export const testimonials = [
 
 export const teams = [
   {
+    name: "Chakravarthy Devarakonda",
+    designation: " HR Manager.",
+    Profile: Team5,
+  },
+
+  {
+    name: "Esub Vali Sayyed.",
+    designation: "Technical manager",
+    Profile: Team6,
+  },
+  {
+    name: "Sundar",
+    designation: "Software Engineer",
+    Profile: Team7,
+  },
+  {
     name: "Lakshmi Sanjana",
     designation: " Sr Hr Executive",
     Profile: Team1,
   },
+
   {
     name: "K.Samsonbabu",
     designation: " Sr. Graphic Designer.",
@@ -55,30 +72,13 @@ export const teams = [
   },
 
   {
-    name: "Chakravarthy Devarakonda",
-    designation: " HR Manager.",
-    Profile: Team5,
-  },
-
-  {
-    name: "Esub Vali Sayyed.",
-    designation: "React Js Sr. Full stack Developer",
-    Profile: Team6,
-  },
-  {
     name: "Charan . R",
-    designation: "React Js Sr.Software Engineer.",
+    designation: "Sr.Software Engineer.",
     Profile: Team7,
   },
   {
     name: "Dinesh Raju Konduru.",
     designation: "Sr. Data Architect.",
     Profile: Team8,
-  },
-
-  {
-    name: "Sundar",
-    designation: "React Js Developer",
-    Profile: Team7,
   },
 ];

@@ -13,6 +13,8 @@ import blog3 from "../Assests/Images/blog/blog-3.jpg";
 import { Player } from "@lottiefiles/react-lottie-player";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import careerbanner from "../Assests/Images/careerbanner.jpg";
+
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -65,7 +67,7 @@ export const Career = () => {
   }, []);
   return (
     <section className="careers">
-      <header>
+      {/* <header>
         <div class="container">
           <div class="page-banner">
             <div class="row justify-content-center align-items-center h-100">
@@ -83,7 +85,23 @@ export const Career = () => {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
+
+      <div class="container-fluid position-relative p-0 nameCon">
+        <div class="carousel-item active" style={{ float: "none" }}>
+          <img class="w-100" src={careerbanner} alt="image" />
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <div class="p-3" style={{ maxWidth: "900px" }}>
+              {/* <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                    About us
+                  </h5> */}
+              <h2 class="display-1 text-white mb-md-4 animated zoomIn">
+                Careers
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="container-fluid py-5 careersCon">
         <div class="container py-5">

@@ -24,6 +24,7 @@ import iosImage from "../Assests/Images/program/smartphone.png";
 import aspnetImage from "../Assests/Images/program/web.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import servicesbanner from "../Assests/Images/servicesbanner.jpg";
 
 export default function Services() {
   const tabs = [
@@ -108,7 +109,7 @@ export default function Services() {
   }, []);
   return (
     <section className="services">
-      <header>
+      {/* <header>
         <div class="container">
           <div class="page-banner">
             <div class="row justify-content-center align-items-center h-100">
@@ -126,7 +127,23 @@ export default function Services() {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
+
+      <div class="container-fluid position-relative p-0 nameCon">
+        <div class="carousel-item active" style={{ float: "none" }}>
+          <img class="w-100" src={servicesbanner} alt="image" />
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <div class="p-3" style={{ maxWidth: "900px" }}>
+              {/* <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                    About us
+                  </h5> */}
+              <h2 class="display-1 text-white mb-md-4 animated zoomIn">
+                Services
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="container py-5 serviceCon">
         <div class="row g-5">

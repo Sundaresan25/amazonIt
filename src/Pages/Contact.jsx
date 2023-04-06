@@ -1,7 +1,49 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import { toast } from "react-hot-toast";
+import contactbanner from "../Assests/Images/contactbanner.jpg";
+
 export default function Contact() {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    subject: "",
+    email: "",
+    message: "",
+  });
+
+  const [error, setError] = React.useState("");
+
+  function onChangeHandler(e) {
+    setFormData((prevState) => {
+      return {
+        ...prevState,
+        [e.target.name]: [e.target.value],
+      };
+    });
+  }
+
+  function submitHandler(e) {
+    e.preventDefault();
+    if (
+      formData.name === "" ||
+      formData.email === "" ||
+      formData.subject === "" ||
+      formData.message === ""
+    ) {
+      setError("All fields are required");
+    } else {
+      toast.success("Message sent successfully");
+      setFormData({
+        name: "",
+        subject: "",
+        email: "",
+        message: "",
+      });
+      setError("");
+    }
+  }
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -11,7 +53,7 @@ export default function Contact() {
   }, []);
   return (
     <section className="contact">
-      <header>
+      {/* <header>
         <div class="container">
           <div class="page-banner">
             <div class="row justify-content-center align-items-center h-100">
@@ -29,7 +71,22 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
+      <div class="container-fluid position-relative p-0 nameCon">
+        <div class="carousel-item active" style={{ float: "none" }}>
+          <img class="w-100" src={contactbanner} alt="image" />
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <div class="p-3" style={{ maxWidth: "900px" }}>
+              {/* <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                    About us
+                  </h5> */}
+              <h2 class="display-1 text-white mb-md-4 animated zoomIn">
+                Contact us
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div
         class="container-fluid py-5 wow fadeInUp contactCon"
@@ -43,11 +100,11 @@ export default function Contact() {
             <h5 class="fw-bold text-primary text-uppercase" data-aos="fade-up">
               Contact Us
             </h5>
-            <h2 class="mb-0">If You Have Any Query, Feel Free To Contact Us</h2>
+            {/* <h2 class="mb-0">If You Have Any Query, Feel Free To Contact Us</h2> */}
           </div>
-          <div class="row g-5 mb-5">
-            <div class="col-lg-4" data-aos="fade-right">
-              <div
+          <div class="row g-5 mb-5 justify-content-center mx-auto">
+            {/* <div class="col-lg-4" data-aos="fade-right">
+              {/* <div
                 class="d-flex align-items-center wow fadeIn"
                 data-wow-delay="0.1s"
               >
@@ -59,8 +116,8 @@ export default function Contact() {
                   <small class="text-primary mb-0">+91 8121058121 </small>
                   <small class="text-primary mb-0">+91 9989409959 </small>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             <div class="col-lg-4" data-aos="fade-up">
               <div
@@ -109,36 +166,54 @@ export default function Contact() {
                   <div class="col-md-6">
                     <input
                       type="text"
+                      name="name"
                       class="form-control border-0 bg-light px-4"
-                      placeholder="Your Name"
+                      placeholder="Your Name*"
                       style={{ height: "55px" }}
+                      value={formData.name}
+                      onChange={onChangeHandler}
                     />
                   </div>
                   <div class="col-md-6" data-aos="fade-left">
                     <input
                       type="email"
+                      name="email"
                       class="form-control border-0 bg-light px-4"
-                      placeholder="Your Email"
+                      placeholder="Your Email*"
                       style={{ height: "55px" }}
+                      value={formData.email}
+                      onChange={onChangeHandler}
                     />
                   </div>
                   <div class="col-12">
                     <input
                       type="text"
+                      name="subject"
                       class="form-control border-0 bg-light px-4"
-                      placeholder="Subject"
+                      placeholder="Subject*"
                       style={{ height: "55px" }}
+                      value={formData.subject}
+                      onChange={onChangeHandler}
                     />
                   </div>
                   <div class="col-12">
                     <textarea
                       class="form-control border-0 bg-light px-4 py-3"
+                      name="message"
                       rows="4"
-                      placeholder="Message"
+                      placeholder="Message*"
+                      value={formData.message}
+                      onChange={onChangeHandler}
                     ></textarea>
                   </div>
+                  <div>
+                    <p style={{ color: "red" }}>{error}</p>
+                  </div>
                   <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
+                    <button
+                      class="btn btn-primary w-100 py-3"
+                      onClick={submitHandler}
+                    >
                       Send Message
                     </button>
                   </div>

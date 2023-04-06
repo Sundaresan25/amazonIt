@@ -148,6 +148,7 @@ export default function Home() {
           id="header-carousel"
           class="carousel slide carousel-fade "
           data-bs-ride="carousel"
+          data-bs-interval="5000"
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -162,13 +163,13 @@ export default function Home() {
                   </h1>
                   <Link
                     to="/services"
-                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft text-decoration-none"
                   >
                     Our Services
                   </Link>
                   <Link
                     to="/contact"
-                    class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight"
+                    class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight text-decoration-none btn-outline-light"
                   >
                     Contact Us
                   </Link>
@@ -180,20 +181,20 @@ export default function Home() {
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h5 class="text-white text-uppercase mb-3 animated slideInDown">
-                    Creative & Innovative
+                    Innovative IT Solutions
                   </h5>
                   <h1 class="display-1 text-white mb-md-4 animated zoomIn">
-                    Creative & Innovative Digital Solution
+                    Creative &amp; Innovative Digital Solutions
                   </h1>
                   <Link
                     to="/services"
-                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft text-decoration-none"
                   >
                     Our Services
                   </Link>
                   <Link
                     to="/contact"
-                    class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight"
+                    class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight text-decoration-none btn-outline-light"
                   >
                     Contact Us
                   </Link>

@@ -42,11 +42,11 @@ export default function Footer() {
       url: "",
       logo: "mai-logo-linkedin",
     },
-    {
-      name: "WhatsApp",
-      url: "https://wa.me/message/QA5EQSULC22MM1",
-      logo: "mai-logo-whatsapp",
-    },
+    // {
+    //   name: "WhatsApp",
+    //   url: "https://wa.me/message/QA5EQSULC22MM1",
+    //   logo: "mai-logo-whatsapp",
+    // },
     {
       name: "Instagram",
       url: "",

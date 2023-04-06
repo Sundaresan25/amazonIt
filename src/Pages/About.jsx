@@ -8,6 +8,8 @@ import { teams } from "../Utilities/Utilities";
 import { Player } from "@lottiefiles/react-lottie-player";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
+import aboutbanner from "../Assests/Images/aboutbanner.jpg";
 
 export default function About() {
   useEffect(() => {
@@ -19,7 +21,7 @@ export default function About() {
   }, []);
   return (
     <section className="about">
-      <header>
+      {/* <header>
         <div class="container">
           <div class="page-banner">
             <div class="row justify-content-center align-items-center h-100">
@@ -37,7 +39,23 @@ export default function About() {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
+
+      <div class="container-fluid position-relative p-0 nameCon">
+        <div class="carousel-item active" style={{ float: "none" }}>
+          <img class="w-100" src={aboutbanner} alt="image" />
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <div class="p-3" style={{ maxWidth: "900px" }}>
+              {/* <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                    About us
+                  </h5> */}
+              <h2 class="display-1 text-white mb-md-4 animated zoomIn">
+                About us
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         class="container-fluid py-5 wow fadeInUp aboutCon"
         data-wow-delay="0.1s"
@@ -85,8 +103,10 @@ export default function About() {
                   <i class="fa fa-phone-alt text-white"></i>
                 </div>
                 <div class="ps-4">
-                  <h5 class="mb-2">Call to ask any question</h5>
-                  <h4 class="text-primary mb-0">+91 8121058121 </h4>
+                  <h5 class="mb-2">Feel Free To Contact Us</h5>
+                  <h6 class="text-primary mb-0">
+                    support@amazonitsolutions.in
+                  </h6>
                 </div>
               </div>
               {/* <a
@@ -116,7 +136,7 @@ export default function About() {
           <div class="row align-items-center">
             <div class="col-lg-6 py-3 wow fadeInUp" data-aos="fade-up">
               <span class="subhead">About us</span>
-              <h2 class="title-section">The number #1 IT Solutions Company</h2>
+              {/* <h2 class="title-section">The number #1 IT Solutions Company</h2> */}
               <div class="divider"></div>
 
               <p>

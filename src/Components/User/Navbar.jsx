@@ -166,13 +166,14 @@ export default function Navbar() {
       <nav
         class={`navbar navbar-expand-lg navbar-light bg-white px-5 py-3 py-lg-0 `}
         style={
-          location.pathname !== "/"
-            ? {
-                position: "sticky",
-                top: "0",
-                zIndex: "9999",
-              }
-            : {}
+          // location.pathname !== "/"
+          // ?
+          {
+            position: "sticky",
+            top: "0",
+            zIndex: "9999",
+          }
+          // : {}
         }
       >
         <Link to="/" class="navbar-brand p-0 Logo">
