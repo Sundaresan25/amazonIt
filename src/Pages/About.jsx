@@ -103,7 +103,7 @@ export default function About() {
                   <i class="fa fa-phone-alt text-white"></i>
                 </div>
                 <div class="ps-4">
-                  <h5 class="mb-2">Feel Free To Contact Us</h5>
+                  <h5 class="mb-2">Contact Us</h5>
                   <h6 class="text-primary mb-0">
                     support@amazonitsolutions.in
                   </h6>

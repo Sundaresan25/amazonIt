@@ -144,7 +144,7 @@ export default function Contact() {
                   <i class="fa fa-envelope-open text-white"></i>
                 </div>
                 <div class="ps-4">
-                  <h5 class="mb-2">Email to get free quote</h5>
+                  <h5 class="mb-2">Email</h5>
                   <small class="text-primary mb-0">
                     {" "}
                     support@amazonitsolutions.in
