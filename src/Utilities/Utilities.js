@@ -46,7 +46,7 @@ export const teams = [
 
   {
     name: "Pavan kumar K",
-    designation: "COO – Chief Operating Officer",
+    designation: "COO",
     Profile: Team7,
   },
   {
