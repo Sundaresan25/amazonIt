@@ -43,6 +43,12 @@ export const teams = [
     designation: "Technical manager",
     Profile: Team6,
   },
+
+  {
+    name: "Pavan kumar K",
+    designation: "COO – Chief Operating Officer",
+    Profile: Team7,
+  },
   {
     name: "Sundar",
     designation: "Software Engineer",
@@ -80,5 +86,10 @@ export const teams = [
     name: "Dinesh Raju Konduru.",
     designation: "Sr. Data Architect.",
     Profile: Team8,
+  },
+  {
+    name: "M. Raj mohan",
+    designation: "Sr . Software Developer.",
+    Profile: Team7,
   },
 ];

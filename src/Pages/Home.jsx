@@ -46,53 +46,6 @@ export default function Home() {
     },
   };
 
-  const paths = [
-    {
-      path: "/",
-      label: "Home",
-      active: location.pathname === "/" ? true : false,
-    },
-    {
-      path: "/services",
-      label: "Services",
-      active: location.pathname.includes("/services") ? true : false,
-    },
-    {
-      path: "/careers",
-      label: "Careers ",
-      active: location.pathname.includes("/careers") ? true : false,
-    },
-    {
-      path: "/about",
-      label: "About",
-      active: location.pathname.includes("/about") ? true : false,
-    },
-
-    {
-      path: "/contact",
-      label: "Contact Us",
-      active: location.pathname.includes("/contact") ? true : false,
-    },
-  ];
-
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -148,7 +101,7 @@ export default function Home() {
           id="header-carousel"
           class="carousel slide carousel-fade "
           data-bs-ride="carousel"
-          data-bs-interval="5000"
+          data-bs-interval="2500"
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
