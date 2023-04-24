@@ -49,7 +49,7 @@ export default function Footer() {
     // },
     {
       name: "Instagram",
-      url: "",
+      url: "https://www.linkedin.com/company/amazon-it-solution/",
       logo: "mai-logo-instagram",
     },
     {
