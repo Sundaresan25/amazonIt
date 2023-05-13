@@ -1,13 +1,17 @@
+import React, { lazy, Suspense } from "react";
 import "./App.css";
-import Index from "./Pages";
-// import "./Assests/Css/bootstrap.css";
 import "./Assests/Css/theme.css";
 import "./Assests/Css/maicons.css";
+import Loader from "./Components/User/Loader";
+
+const LazyIndex = lazy(() => import("./Pages"));
 
 function App() {
   return (
     <div className="App">
-      <Index />
+      <Suspense fallback={<Loader />}>
+        <LazyIndex />
+      </Suspense>
     </div>
   );
 }
