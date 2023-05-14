@@ -47,7 +47,7 @@ export default function Contact() {
       });
     } else {
       const msg = {
-        to: "hr@amazonitsolutions@gmail.com",
+        to: "hr@amazonitsolutions.in",
         name: formData.name,
         subject: formData.subject,
         email: formData.email,
@@ -86,6 +86,7 @@ export default function Contact() {
       once: true,
     });
   }, []);
+
   return (
     <section className="contact">
       {/* <header>
