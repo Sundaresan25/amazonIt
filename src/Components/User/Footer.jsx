@@ -39,7 +39,7 @@ export default function Footer() {
     },
     {
       name: "LinkedIn",
-      url: "",
+      url: "https://www.linkedin.com/company/amazon-it-solution/",
       logo: "mai-logo-linkedin",
     },
     // {
@@ -49,7 +49,7 @@ export default function Footer() {
     // },
     {
       name: "Instagram",
-      url: "https://www.linkedin.com/company/amazon-it-solution/",
+      url: "https://instagram.com/amazonitsolutions?igshid=OTk0YzhjMDVlZA==",
       logo: "mai-logo-instagram",
     },
     {

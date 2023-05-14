@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import React, { useEffect } from "react";
 import { toast } from "react-hot-toast";
 import contactbanner from "../Assests/Images/contactbanner.jpg";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [formData, setFormData] = React.useState({
@@ -30,6 +31,7 @@ export default function Contact() {
 
   function submitHandler(e) {
     e.preventDefault();
+    emailjs.init("J-99Tq5wh3CO7LF8_");
     if (
       formData.name === "" ||
       !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(formData.email) ||
@@ -44,19 +46,36 @@ export default function Contact() {
         message: formData.message === "" ? "Message is required" : "",
       });
     } else {
-      toast.success("Thanks for contacting us, soon we will reach out to you.");
-      setFormData({
-        name: "",
-        subject: "",
-        email: "",
-        message: "",
-      });
-      setError({
-        name: "",
-        subject: "",
-        email: "",
-        message: "",
-      });
+      const msg = {
+        to: "hr@amazonitsolutions@gmail.com",
+        name: formData.name,
+        subject: formData.subject,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      emailjs
+        .send("service_mclha0n", "template_staqe5l", msg)
+        .then((response) => {
+          toast.success(
+            "Thanks for contacting us, soon we will reach out to you."
+          );
+          setFormData({
+            name: "",
+            subject: "",
+            email: "",
+            message: "",
+          });
+          setError({
+            name: "",
+            subject: "",
+            email: "",
+            message: "",
+          });
+        })
+        .catch((error) => {
+          console.error("Email failed to send:", error);
+        });
     }
   }
 

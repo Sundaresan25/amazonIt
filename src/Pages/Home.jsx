@@ -112,7 +112,7 @@ export default function Home() {
                     Revolutionize Your IT Solutions
                   </h5>
                   <h1 class="display-1 text-white mb-md-4 animated zoomIn">
-                    Digital Innovation for Your Business Success
+                    Recruitment agency for IT companies
                   </h1>
                   <Link
                     to="/services"
