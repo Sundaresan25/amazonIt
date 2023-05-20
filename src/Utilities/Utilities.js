@@ -7,6 +7,8 @@ import Team6 from "../Assests/Images/team-6.jpg";
 import Team7 from "../Assests/Images/team-7.png";
 
 import Team8 from "../Assests/Images/team-8.jpg";
+import Team9 from "../Assests/Images/team-9.jpg";
+
 export const testimonials = [
   {
     name: "John Doe",
@@ -48,6 +50,12 @@ export const teams = [
     name: "Pavan kumar K",
     designation: "COO",
     Profile: Team7,
+  },
+
+  {
+    name: "V.Dinesh Kumar",
+    designation: "Technical Lead",
+    Profile: Team9,
   },
   {
     name: "Sundar",

@@ -1,8 +1,7 @@
-import banner_image1 from "../Assests/Images/banner_image_1.svg";
 import service1 from "../Assests/Images/services/service-1.svg";
 import service2 from "../Assests/Images/services/service-2.svg";
 import service3 from "../Assests/Images/services/service-3.svg";
-import about_frame from "../Assests/Images/about_frame.png";
+
 import bg_pattern from "../Assests/Images/bg_pattern.svg";
 import banner_image2 from "../Assests/Images/banner_image_2.svg";
 
@@ -14,6 +13,7 @@ import { testimonials } from "../Utilities/Utilities";
 import { Link, useLocation } from "react-router-dom";
 import carousel1 from "../Assests/Images/carousel-1.jpg";
 import carousel2 from "../Assests/Images/carousel-2.jpg";
+import carousel3 from "../Assests/Images/carousel-3.jpg";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -154,6 +154,32 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div class="carousel-item">
+              <img class="w-100" src={carousel3} alt="Image" />
+              <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style={{ maxWidth: "900px" }}>
+                  <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                    Leading IT Services Provider
+                  </h5>
+                  <h1 class="display-1 text-white mb-md-4 animated zoomIn">
+                    Creative Digital Solutions
+                  </h1>
+                  <Link
+                    to="/services"
+                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft text-decoration-none"
+                  >
+                    Our Services
+                  </Link>
+                  <Link
+                    to="/contact"
+                    class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight text-decoration-none btn-outline-light"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+            </div>
+            ``
           </div>
           <button
             class="carousel-control-prev"
