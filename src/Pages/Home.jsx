@@ -21,11 +21,8 @@ import { OurPartners } from "../Components/User/OurPartners";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import Logo from "../Assests/Images/Amazon-Logo1.png";
 
 export default function Home() {
-  const location = useLocation();
-
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -129,8 +126,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div class="carousel-item">
-              <img class="w-100" src={carousel2} alt="Image" />
+              <img class="w-100" src={carousel3} alt="Image" />
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h5 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -155,14 +153,14 @@ export default function Home() {
               </div>
             </div>
             <div class="carousel-item">
-              <img class="w-100" src={carousel3} alt="Image" />
+              <img class="w-100" src={carousel2} alt="Image" />
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h5 class="text-white text-uppercase mb-3 animated slideInDown">
                     Leading IT Services Provider
                   </h5>
                   <h1 class="display-1 text-white mb-md-4 animated zoomIn">
-                    Creative Digital Solutions
+                    Excellence Through Finding People
                   </h1>
                   <Link
                     to="/services"
@@ -179,7 +177,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            ``
           </div>
           <button
             class="carousel-control-prev"

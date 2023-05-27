@@ -8,10 +8,32 @@ import { teams } from "../Utilities/Utilities";
 import { Player } from "@lottiefiles/react-lottie-player";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+
 import aboutbanner from "../Assests/Images/aboutbanner.jpg";
 
+import Carousel from "react-multi-carousel";
+
 export default function About() {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -264,7 +286,7 @@ export default function About() {
         </div>
       </div>
 
-      <div class="container-xxl py-5 ">
+      <div class="container-xxl py-5">
         <div class="container px-lg-5">
           <div
             class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
@@ -272,20 +294,31 @@ export default function About() {
             style={{ maxWidth: "600px" }}
           >
             <h2 class="mb-3 text-primary">Our Team Members</h2>
-            {/* <p class="mb-1">
-              Vero justo sed sed vero clita amet. Et justo vero sea diam elitr
-              amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero
-              elitr sit clita.
-            </p> */}
           </div>
-          <div class="row g-4">
+
+          <Carousel
+            ssr
+            partialVisbile
+            swipeable={true}
+            draggable={true}
+            // showDots={true}
+            responsive={responsive}
+            customTransition="transform 0.5s ease-in-out" // means to render carousel on server-side.
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={2000}
+            keyBoardControl={true}
+            // customTransition="all .5"
+            transitionDuration={500}
+            containerClass="team-carousel"
+            // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+            arrows={false}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
             {teams.map((data, index) => (
-              <div
-                class="col-lg-3 col-md-6 wow fadeInUp"
-                data-wow-delay="0.1s"
-                key={index}
-              >
-                <div class="team-item border-top border-5 border-primary rounded shadow overflow-hidden teamCon">
+              <div class="wow" key={index}>
+                <div class="team-item border-top border-5 border-primary rounded shadow teamCon mx-1 mx-md-4">
                   <div class="text-center p-4">
                     <img
                       class="img-fluid rounded-circle mb-4"
@@ -295,119 +328,12 @@ export default function About() {
                     <h5 class="fw-bold mb-1">{data.name}</h5>
                     <small>{data.designation}</small>
                   </div>
-                  {/* <div class="d-flex justify-content-center bg-primary p-3">
-                    <a class="btn btn-square text-primary bg-white m-1" href="">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="btn btn-square text-primary bg-white m-1" href="">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="btn btn-square text-primary bg-white m-1" href="">
-                      <i class="fab fa-instagram"></i>
-                    </a>
-                  </div> */}
                 </div>
               </div>
             ))}
-          </div>
+          </Carousel>
         </div>
       </div>
-      {/* <div class="container-xxl py-5">
-        <div class="container px-lg-5">
-          <div
-            class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style={{ maxWidth: "600px" }}
-          >
-            <h1 class="mb-3">Shared VS Dedicated Server</h1>
-            <p class="mb-1">
-              Vero justo sed sed vero clita amet. Et justo vero sea diam elitr
-              amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero
-              elitr sit clita.
-            </p>
-          </div>
-          <div class="row g-5 comparison position-relative">
-            <div class="col-lg-6 pe-lg-5">
-              <div class="section-title position-relative mx-auto mb-4 pb-4">
-                <h3 class="fw-bold mb-0">Shared Server</h3>
-              </div>
-              <div class="row gy-3 gx-5">
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                  <i class="fa fa-server fa-3x text-primary mb-3"></i>
-                  <h5 class="fw-bold">99.99% Uptime</h5>
-                  <p>
-                    Ipsum dolor diam stet stet kasd diam sea stet sed rebum
-                    dolor ipsum
-                  </p>
-                </div>
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                  <i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
-                  <h5 class="fw-bold">100% Secured</h5>
-                  <p>
-                    Ipsum dolor diam stet stet kasd diam sea stet sed rebum
-                    dolor ipsum
-                  </p>
-                </div>
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                  <i class="fa fa-cog fa-3x text-primary mb-3"></i>
-                  <h5 class="fw-bold">Control Panel</h5>
-                  <p>
-                    Ipsum dolor diam stet stet kasd diam sea stet sed rebum
-                    dolor ipsum
-                  </p>
-                </div>
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                  <i class="fa fa-headset fa-3x text-primary mb-3"></i>
-                  <h5 class="fw-bold">24/7 Support</h5>
-                  <p>
-                    Ipsum dolor diam stet stet kasd diam sea stet sed rebum
-                    dolor ipsum
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 ps-lg-5">
-              <div class="section-title position-relative mx-auto mb-4 pb-4">
-                <h3 class="fw-bold mb-0">Dedicated Server</h3>
-              </div>
-              <div class="row gy-3 gx-5">
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                  <i class="fa fa-server fa-3x text-secondary mb-3"></i>
-                  <h5 class="fw-bold">99.99% Uptime</h5>
-                  <p>
-                    Ipsum dolor diam stet stet kasd diam sea stet sed rebum
-                    dolor ipsum
-                  </p>
-                </div>
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                  <i class="fa fa-shield-alt fa-3x text-secondary mb-3"></i>
-                  <h5 class="fw-bold">100% Secured</h5>
-                  <p>
-                    Ipsum dolor diam stet stet kasd diam sea stet sed rebum
-                    dolor ipsum
-                  </p>
-                </div>
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                  <i class="fa fa-cog fa-3x text-secondary mb-3"></i>
-                  <h5 class="fw-bold">Control Panel</h5>
-                  <p>
-                    Ipsum dolor diam stet stet kasd diam sea stet sed rebum
-                    dolor ipsum
-                  </p>
-                </div>
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                  <i class="fa fa-headset fa-3x text-secondary mb-3"></i>
-                  <h5 class="fw-bold">24/7 Support</h5>
-                  <p>
-                    Ipsum dolor diam stet stet kasd diam sea stet sed rebum
-                    dolor ipsum
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 }
