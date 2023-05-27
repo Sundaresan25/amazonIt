@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+.team-carousel {
+  height: 360px;
+}
+
 .carousel-item {
   position: relative;
   transition: transform 0.5s ease-in-out;
@@ -21,9 +25,6 @@
 
 .carousel-item-active {
   transform: translateX(0%);
-}
-.team-carousel {
-  height: 360px;
 }
 
 .banner-seo-check .count {
