@@ -310,7 +310,7 @@ export default function About() {
             keyBoardControl={true}
             // customTransition="all .5"
             transitionDuration={500}
-            containerClass="team-carousel"
+            containerClass="carousel-container"
             // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
             arrows={false}
             dotListClass="custom-dot-list-style"

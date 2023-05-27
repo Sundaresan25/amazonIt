@@ -608,7 +608,7 @@ export default function Home() {
               keyBoardControl={true}
               // customTransition="all .5"
               transitionDuration={500}
-              containerClass="carousel-container"
+              containerClass=""
               // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
               arrows={false}
               dotListClass="custom-dot-list-style"
