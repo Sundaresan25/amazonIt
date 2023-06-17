@@ -4,11 +4,11 @@ import DirectionsIcon from "@mui/icons-material/Directions";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import React, { useEffect } from "react";
 
-import service1 from "../Assests/Images/service1.jpg";
-import service2 from "../Assests/Images/service2.jpg";
-import ourservice1 from "../Assests/Images/ourservice1.jpg";
-import ourservice2 from "../Assests/Images/ourservice2.jpg";
-import ourservice3 from "../Assests/Images/ourservice3.jpg";
+import service1 from "../Assests/Images/no_1_staffing_solutions.jpg";
+import service2 from "../Assests/Images/private_jobs_in_india.jpg";
+import ourservice1 from "../Assests/Images/it_jobs.jpg";
+import ourservice2 from "../Assests/Images/non_it_jobs.jpg";
+import ourservice3 from "../Assests/Images/other_job.jpg";
 import { OurPartners } from "../Components/User/OurPartners";
 import reactNativeImage from "../Assests/Images/program/atom.png";
 import androidImage from "../Assests/Images/program/android.png";
@@ -24,9 +24,10 @@ import iosImage from "../Assests/Images/program/smartphone.png";
 import aspnetImage from "../Assests/Images/program/web.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import servicesbanner from "../Assests/Images/servicesbanner.jpg";
+import servicesbanner from "../Assests/Images/service_amazon_it_solutions.jpg";
 
 export default function Services() {
+  // services tabs
   const tabs = [
     {
       label: "IT Services",
@@ -41,7 +42,7 @@ export default function Services() {
       icon: <ImportantDevicesIcon />,
     },
   ];
-
+  // technologies list
   const technologiesList = [
     {
       label: "React Native",
@@ -92,14 +93,16 @@ export default function Services() {
       img: aspnetImage,
     },
   ];
-
+  // tab state
   const [tabValue, setTabValue] = React.useState(
     parseInt(sessionStorage.getItem("service-type")) || 0
   );
+
+  // handlechange to change tab value
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };
-
+  // initialize the animate on scroll
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -108,35 +111,14 @@ export default function Services() {
     });
   }, []);
   return (
+    // services
     <section className="services">
-      {/* <header>
-        <div class="container">
-          <div class="page-banner">
-            <div class="row justify-content-center align-items-center h-100">
-              <div class="col-md-6">
-                <nav aria-label="Breadcrumb">
-                  <ul class="breadcrumb justify-content-center py-0 bg-transparent">
-                    <li class="breadcrumb-item">
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active">Services</li>
-                  </ul>
-                </nav>
-                <h2 class="text-center">Our Services</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header> */}
-
+      {/* service banner start */}
       <div class="container-fluid position-relative p-0 nameCon">
         <div class="carousel-item active" style={{ float: "none" }}>
-          <img class="w-100" src={servicesbanner} alt="image" />
+          <img class="w-100" src={servicesbanner} alt="recruitment_services" />
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <div class="p-3" style={{ maxWidth: "900px" }}>
-              {/* <h5 class="text-white text-uppercase mb-3 animated slideInDown">
-                    About us
-                  </h5> */}
               <h2 class="display-1 text-white mb-md-4 animated zoomIn">
                 Services
               </h2>
@@ -144,6 +126,9 @@ export default function Services() {
           </div>
         </div>
       </div>
+      {/* service banner end */}
+
+      {/* service container start */}
 
       <div class="container py-5 serviceCon">
         <div class="row g-5">
@@ -198,14 +183,14 @@ export default function Services() {
                 data-wow-delay="0.9s"
                 src={service1}
                 style={{ objectFit: "cover" }}
+                alt="amazon_it_solutions"
               />
             </div>
           </div>
         </div>
       </div>
+      {/* service container end */}
 
-      {/* <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5"> */}
       <div
         class="section-title text-center position-relative pb-3 mb-2 mx-auto"
         style={{ maxWidth: "600px" }}
@@ -216,6 +201,7 @@ export default function Services() {
             </h1> */}
       </div>
 
+      {/* tabs Ui */}
       <IconTabs
         tabs={tabs}
         value={tabValue}
@@ -225,7 +211,7 @@ export default function Services() {
           handleChange(event, newValue);
         }}
       />
-
+      {/* service tab content  */}
       <div class="page-section mt-0 p-0 serviceTab">
         {tabValue === 0 ? (
           <>
@@ -329,7 +315,11 @@ export default function Services() {
               </div>
               <div class="col-lg-6 py-3">
                 <div class="img-fluid py-3 text-center">
-                  <img className="img-fluid" src={ourservice2} alt="about" />
+                  <img
+                    className="img-fluid"
+                    src={ourservice2}
+                    alt="non_it_jobs"
+                  />
                 </div>
               </div>
             </div>
@@ -360,7 +350,11 @@ export default function Services() {
               </div>
               <div class="col-lg-6 py-3">
                 <div class="img-fluid py-3 text-center">
-                  <img src={ourservice3} className="img-fluid" alt="about" />
+                  <img
+                    src={ourservice3}
+                    className="img-fluid"
+                    alt="chat_jobs"
+                  />
                 </div>
               </div>
             </div>
@@ -368,8 +362,10 @@ export default function Services() {
         )}
       </div>
 
+      {/* our partner ui */}
       <OurPartners />
 
+      {/* amazon service chart */}
       <div
         class="container-fluid py-1 my-3 wow fadeInUp servicesFeature"
         data-wow-delay="0.1s"
@@ -432,6 +428,7 @@ export default function Services() {
                   data-wow-delay="0.1s"
                   src={service2}
                   style={{ objectFit: "cover" }}
+                  alt="connecting_with_top_companies"
                 />
               </div>
             </div>

@@ -1,6 +1,6 @@
 import blog1 from "../Assests/Images/blog/blog-1.jpg";
 import blog2 from "../Assests/Images/blog/blog-2.jpg";
-import blog3 from "../Assests/Images/blog/blog-3.jpg";
+import blog3 from "../Assests/Images/blog/recruitment_agency.jpg";
 import blog4 from "../Assests/Images/blog/blog-4.jpg";
 import blog5 from "../Assests/Images/blog/blog-5.jpg";
 import blog6 from "../Assests/Images/blog/blog-6.jpg";

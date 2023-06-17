@@ -1,19 +1,19 @@
-import service1 from "../Assests/Images/services/service-1.svg";
-import service2 from "../Assests/Images/services/service-2.svg";
-import service3 from "../Assests/Images/services/service-3.svg";
+import service1 from "../Assests/Images/services/it_services.svg";
+import service2 from "../Assests/Images/services/non_it_services.svg";
+import service3 from "../Assests/Images/services/others_services.svg";
 
 import bg_pattern from "../Assests/Images/bg_pattern.svg";
 import banner_image2 from "../Assests/Images/banner_image_2.svg";
 
-import blog3 from "../Assests/Images/blog/blog-3.jpg";
+import blog3 from "../Assests/Images/blog/recruitment_agency.jpg";
 import CountUp from "react-countup";
 
 import { Player } from "@lottiefiles/react-lottie-player";
 import { testimonials } from "../Utilities/Utilities";
 import { Link, useLocation } from "react-router-dom";
-import carousel1 from "../Assests/Images/carousel-1.jpg";
-import carousel2 from "../Assests/Images/carousel-2.jpg";
-import carousel3 from "../Assests/Images/carousel-3.jpg";
+import carousel1 from "../Assests/Images/it_solutions.jpg";
+import carousel2 from "../Assests/Images/staffing_services.jpg";
+import carousel3 from "../Assests/Images/jobs_in_india.jpg";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -23,6 +23,7 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  // responsive for carousel
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -43,6 +44,7 @@ export default function Home() {
     },
   };
 
+  // initialize the animate on scroll
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -52,47 +54,9 @@ export default function Home() {
   }, []);
 
   return (
+    // home
     <section className="home">
-      {/* <header>
-        <div class="container">
-          <div class="page-banner home-banner">
-            <div class="row align-items-center flex-wrap-reverse h-100">
-              <div class="col-md-6 py-5 wow fadeInLeft">
-                <h1 class="mb-4  heading1">
-                  Connecting top talent with diverse job opportunities!
-                </h1>
-                <p class="text-lg text-grey mb-5">
-                  Find your dream job in IT, non-IT, or chat roles. Empowering
-                  your career journey with exciting job opportunities
-                </p>
-                <Link to="/services" class="btn btn-primary btn-split">
-                  Read More{" "}
-                  <div class="fab">
-                    <span class="mai-play"></span>
-                  </div>
-                </Link>
-              </div>
-              <div class="col-md-6 py-5 wow zoomIn">
-                <div class="img-fluid text-center">
-                  {/* <img src={banner_image1} alt="" /> */}
-      {/* 
-                  <Player
-                    src="https://assets4.lottiefiles.com/packages/lf20_ebbfp58m.json"
-                    background="transparent"
-                    speed={1}
-                    className="head-img"
-                    autoplay
-                  />
-                </div>
-              </div>
-            </div>
-            <a href="#about" class="btn-scroll" data-role="smoothscroll">
-              <span class="mai-arrow-down"></span>
-            </a>
-          </div>
-        </div>
-      </header> */}{" "}
-      {/* */}
+      {/* banner carousel start*/}
       <div class="container-fluid position-relative p-0 homeCon">
         <div
           id="header-carousel"
@@ -101,8 +65,9 @@ export default function Home() {
           data-bs-interval="3000"
         >
           <div class="carousel-inner">
+            {/* carousel 1 */}
             <div class="carousel-item active">
-              <img class="w-100" src={carousel1} alt="image" />
+              <img class="w-100" src={carousel1} alt="Hero_banner_1" />
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h5 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -126,9 +91,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
+            {/* carousel 2 */}
             <div class="carousel-item">
-              <img class="w-100" src={carousel3} alt="Image" />
+              <img class="w-100" src={carousel3} alt="Hero_banner_2" />
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h5 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -152,8 +117,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            {/* carousel 3 */}
             <div class="carousel-item">
-              <img class="w-100" src={carousel2} alt="Image" />
+              <img class="w-100" src={carousel2} alt="Hero_banner_3" />
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h5 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -198,13 +164,16 @@ export default function Home() {
           </button>
         </div>
       </div>
+      {/* banner carousel end*/}
+
+      {/* services card start */}
       <div class="page-section">
         <div class="container">
           <div class="row">
             <div class="col-lg-4" data-aos="fade-up">
               <div class="card-service wow fadeInUp">
                 <div class="header">
-                  <img src={service1} alt="" />
+                  <img src={service1} alt="it_jobs" />
                 </div>
                 <div class="body">
                   <h5 class="text-secondary">IT Jobs</h5>
@@ -227,7 +196,7 @@ export default function Home() {
             <div class="col-lg-4" data-aos="fade-up">
               <div class="card-service wow fadeInUp">
                 <div class="header">
-                  <img src={service2} alt="" />
+                  <img src={service2} alt="non_it_jobs" />
                 </div>
                 <div class="body">
                   <h5 class="text-secondary">Non-IT Jobs</h5>
@@ -248,7 +217,7 @@ export default function Home() {
             <div class="col-lg-4" data-aos="fade-up">
               <div class="card-service wow fadeInUp">
                 <div class="header">
-                  <img src={service3} alt="" />
+                  <img src={service3} alt="chat_support_jobs" />
                 </div>
                 <div class="body">
                   <h5 class="text-secondary">Chat Support Jobs</h5>
@@ -269,6 +238,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* services card end */}
+
+      {/* about container start */}
       <div class="page-section" id="about">
         <div class="container">
           <div class="row align-items-center">
@@ -309,114 +281,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <div class="page-section bg-light">
-        <div class="container">
-          <div class="text-center wow fadeInUp">
-            <div class="subhead">Our services</div>
-            <h2 class="title-section">How SEO Team Can Help</h2>
-            <div class="divider mx-auto"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-              <div class="features">
-                <div class="header mb-3">
-                  <span class="mai-business"></span>
-                </div>
-                <h5>OnSite SEO</h5>
-                <p>
-                  We analyse your website's structure, internal architecture &
-                  other key
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-              <div class="features">
-                <div class="header mb-3">
-                  <span class="mai-business"></span>
-                </div>
-                <h5>OnSite SEO</h5>
-                <p>
-                  We analyse your website's structure, internal architecture &
-                  other key
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-              <div class="features">
-                <div class="header mb-3">
-                  <span class="mai-business"></span>
-                </div>
-                <h5>OnSite SEO</h5>
-                <p>
-                  We analyse your website's structure, internal architecture &
-                  other key
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-              <div class="features">
-                <div class="header mb-3">
-                  <span class="mai-business"></span>
-                </div>
-                <h5>OnSite SEO</h5>
-                <p>
-                  We analyse your website's structure, internal architecture &
-                  other key
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-              <div class="features">
-                <div class="header mb-3">
-                  <span class="mai-business"></span>
-                </div>
-                <h5>OnSite SEO</h5>
-                <p>
-                  We analyse your website's structure, internal architecture &
-                  other key
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-              <div class="features">
-                <div class="header mb-3">
-                  <span class="mai-business"></span>
-                </div>
-                <h5>OnSite SEO</h5>
-                <p>
-                  We analyse your website's structure, internal architecture &
-                  other key
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-              <div class="features">
-                <div class="header mb-3">
-                  <span class="mai-business"></span>
-                </div>
-                <h5>OnSite SEO</h5>
-                <p>
-                  We analyse your website's structure, internal architecture &
-                  other key
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-              <div class="features">
-                <div class="header mb-3">
-                  <span class="mai-business"></span>
-                </div>
-                <h5>OnSite SEO</h5>
-                <p>
-                  We analyse your website's structure, internal architecture &
-                  other key
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      {/* about container end */}
+      {/* choose us start */}
       <div
         class="container-fluid py-5 wow fadeInUp whyChooseUs"
         data-wow-delay="0.1s"
@@ -475,6 +341,7 @@ export default function Home() {
                   data-wow-delay="0.1s"
                   src={blog3}
                   style={{ objectFit: "cover" }}
+                  alt="about_amazon_it_solutions"
                 />
               </div>
             </div>
@@ -512,6 +379,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* choose us end */}
+      {/* counter start */}
       <div class="page-section banner-seo-check">
         <div
           class="wrap bg-image"
@@ -577,6 +446,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* counter end */}
+      {/* clients start */}
       <div class="container-xxl py-5 wow fadeInUp client" data-wow-delay="0.1s">
         <div class="container px-lg-5">
           <div
@@ -647,7 +518,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* clients end */}
+
+      {/* our partners UI*/}
       <OurPartners />
+      {/* it staff container info start */}
       <div class="page-section banner-info infoCover">
         <div
           class="wrap bg-image"
@@ -698,84 +573,18 @@ export default function Home() {
               </div>
               <div class="col-lg-6 py-3 wow fadeInRight">
                 <div class="img-fluid text-center">
-                  <img className="img-fluid" src={banner_image2} alt="" />
+                  <img
+                    className="img-fluid"
+                    src={banner_image2}
+                    alt="amazon_it_staffing_recruitment_services"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <div class="page-section">
-        <div class="container">
-          <div class="text-center wow fadeInUp">
-            <div class="subhead">Our Services</div>
-            <h2 class="title-section">Amazon It solutions</h2>
-            <div class="divider mx-auto"></div>
-          </div>
-
-          <div class="row mt-5">
-            <div class="col-lg-4 py-3 wow fadeInUp">
-              <div class="card-blog">
-                <div class="header">
-                  <div class="post-thumb">
-                    <img src={blog1} alt="" />
-                  </div>
-                </div>
-                <div class="body">
-                  <h5 class="post-title">
-                    <a href="#">Source of Content Inspiration</a>
-                  </h5>
-                  <div class="post-date">
-                    Posted on <a href="#">27 Jan 2020</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 py-3 wow fadeInUp">
-              <div class="card-blog">
-                <div class="header">
-                  <div class="post-thumb">
-                    <img src={blog2} alt="" />
-                  </div>
-                </div>
-                <div class="body">
-                  <h5 class="post-title">
-                    <a href="#">Source of Content Inspiration</a>
-                  </h5>
-                  <div class="post-date">
-                    Posted on <a href="#">27 Jan 2020</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 py-3 wow fadeInUp">
-              <div class="card-blog">
-                <div class="header">
-                  <div class="post-thumb">
-                    <img src={blog3} alt="" />
-                  </div>
-                </div>
-                <div class="body">
-                  <h5 class="post-title">
-                    <a href="#">Source of Content Inspiration</a>
-                  </h5>
-                  <div class="post-date">
-                    Posted on <a href="#">27 Jan 2020</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12 mt-4 text-center wow fadeInUp">
-              <a href="blog.html" class="btn btn-primary">
-                View More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      {/* it staff container info end */}
     </section>
   );
 }

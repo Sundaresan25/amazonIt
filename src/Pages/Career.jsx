@@ -1,4 +1,4 @@
-import career1 from "../Assests/Images/career1.jpg";
+import career1 from "../Assests/Images/it_jobs_in_amazon_it_solutions.jpg";
 
 import * as React from "react";
 import { styled } from "@mui/material/styles";
@@ -9,11 +9,11 @@ import MuiAccordionSummary, {
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import blog3 from "../Assests/Images/blog/blog-3.jpg";
+import blog3 from "../Assests/Images/blog/recruitment_agency.jpg";
 import { Player } from "@lottiefiles/react-lottie-player";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import careerbanner from "../Assests/Images/careerbanner.jpg";
+import careerbanner from "../Assests/Images/career_amazon_it_solutions.jpg";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -52,12 +52,15 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export const Career = () => {
+  // accordion panel
   const [expanded, setExpanded] = React.useState("panel1");
 
+  // handlechange to change panel value
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
 
+  // initialize the animate on scroll
   React.useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -66,30 +69,12 @@ export const Career = () => {
     });
   }, []);
   return (
+    // careers
     <section className="careers">
-      {/* <header>
-        <div class="container">
-          <div class="page-banner">
-            <div class="row justify-content-center align-items-center h-100">
-              <div class="col-md-6">
-                <nav aria-label="Breadcrumb">
-                  <ul class="breadcrumb justify-content-center py-0 bg-transparent">
-                    <li class="breadcrumb-item">
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active">Careers</li>
-                  </ul>
-                </nav>
-                <h2 class="text-center">Careers</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header> */}
-
+      {/* careers  banner start */}
       <div class="container-fluid position-relative p-0 nameCon">
         <div class="carousel-item active" style={{ float: "none" }}>
-          <img class="w-100" src={careerbanner} alt="image" />
+          <img class="w-100" src={careerbanner} alt="career_banner" />
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <div class="p-3" style={{ maxWidth: "900px" }}>
               {/* <h5 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -102,7 +87,9 @@ export const Career = () => {
           </div>
         </div>
       </div>
+      {/* careers banner end */}
 
+      {/* careers job portal start */}
       <div class="container-fluid py-5 careersCon">
         <div class="container py-5">
           <div class="row align-items-center">
@@ -110,7 +97,7 @@ export const Career = () => {
               <img
                 class="img-fluid rounded mb-4 mb-lg-0"
                 src={career1}
-                alt=""
+                alt="amazon_it_solutions_careers"
               />
             </div>
             <div class="col-lg-7" data-aos="fade-left">
@@ -144,11 +131,10 @@ export const Career = () => {
                   collaborative and inclusive work environment
                 </li>
               </ul>
-              {/* <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">
-      Learn More
-    </a> */}
             </div>
           </div>
+
+          {/* accordion start */}
 
           <Accordion
             expanded={expanded === "panel1"}
@@ -220,6 +206,8 @@ export const Career = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
+
+          {/* accordion end */}
 
           {/* <div class="row">
             <div class="col-lg-4">
@@ -406,6 +394,7 @@ export const Career = () => {
           </div> */}
         </div>
       </div>
+      {/* careers job portal end */}
     </section>
   );
 };

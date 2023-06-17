@@ -3,8 +3,6 @@ import { Routes } from "react-router-dom";
 import Footer from "../Components/User/Footer";
 import Navbar from "../Components/User/Navbar";
 import About from "./About";
-import Blog from "./Blog";
-import BlogDetails from "./BlogDetails";
 import { Career } from "./Career";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -14,6 +12,7 @@ export default function Index() {
   return (
     <>
       <Navbar />
+      {/* routes implementation */}
       <Routes>
         <Route index element={<Home />}></Route>
         <Route path={"/about"} element={<About />}></Route>

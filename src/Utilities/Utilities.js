@@ -1,13 +1,13 @@
-import Team1 from "../Assests/Images/team-1.jpg";
-import Team2 from "../Assests/Images/team-2.jpg";
-import Team3 from "../Assests/Images/team-3.jpg";
-import Team4 from "../Assests/Images/team-4.jpg";
-import Team5 from "../Assests/Images/team-5.jpg";
-import Team6 from "../Assests/Images/team-6.jpg";
-import Team7 from "../Assests/Images/team-7.png";
+import Team1 from "../Assests/Images/amazon_it_team-1.jpg";
+import Team2 from "../Assests/Images/amazon_it_team-2.jpg";
+import Team3 from "../Assests/Images/amazon_it_team-3.jpg";
+import Team4 from "../Assests/Images/amazon_it_team-4.jpg";
+import Team5 from "../Assests/Images/amazon_it_team-5.jpg";
+import Team6 from "../Assests/Images/amazon_it_team-6.jpg";
+import Team7 from "../Assests/Images/amazon_it_team-7.png";
 
-import Team8 from "../Assests/Images/team-8.jpg";
-import Team9 from "../Assests/Images/team-9.jpeg";
+import Team8 from "../Assests/Images/amazon_it_team-8.jpg";
+import Team9 from "../Assests/Images/amazon_it_team-9.jpeg";
 
 export const testimonials = [
   {

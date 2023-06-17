@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import about1 from "../Assests/Images/Office Logo.jpg";
+import about1 from "../Assests/Images/amazon_it_solutions.jpg";
 import image1 from "../Assests/Images/image1.jpg";
 import image2 from "../Assests/Images/image2.jpg";
 
@@ -9,11 +9,12 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import aboutbanner from "../Assests/Images/aboutbanner.jpg";
+import aboutbanner from "../Assests/Images/about_amazon_it_solutions.jpg";
 
 import Carousel from "react-multi-carousel";
 
 export default function About() {
+  // responsive for carousel
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -34,6 +35,7 @@ export default function About() {
     },
   };
 
+  // initialize the animate on scroll
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -42,30 +44,12 @@ export default function About() {
     });
   }, []);
   return (
+    // about
     <section className="about">
-      {/* <header>
-        <div class="container">
-          <div class="page-banner">
-            <div class="row justify-content-center align-items-center h-100">
-              <div class="col-md-6">
-                <nav aria-label="Breadcrumb">
-                  <ul class="breadcrumb justify-content-center py-0 bg-transparent">
-                    <li class="breadcrumb-item">
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active">About</li>
-                  </ul>
-                </nav>
-                <h2 class="text-center">About Us</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header> */}
-
+      {/* about banner start */}
       <div class="container-fluid position-relative p-0 nameCon">
         <div class="carousel-item active" style={{ float: "none" }}>
-          <img class="w-100" src={aboutbanner} alt="image" />
+          <img class="w-100" src={aboutbanner} alt="about_banner" />
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <div class="p-3" style={{ maxWidth: "900px" }}>
               {/* <h5 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -78,6 +62,8 @@ export default function About() {
           </div>
         </div>
       </div>
+      {/*  about banner end */}
+      {/* about container start */}
       <div
         class="container-fluid py-5 wow fadeInUp aboutCon"
         data-wow-delay="0.1s"
@@ -146,12 +132,14 @@ export default function About() {
                   data-wow-delay="0.9s"
                   src={about1}
                   style={{ objectFit: "cover" }}
+                  alt="about_amazon_it_solutions"
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* about us */}
 
       <div class="page-section p-0 m-0 aboutCon2" id="about">
         <div class="container">
@@ -195,9 +183,10 @@ export default function About() {
       <div class="page-section aboutCon3">
         <div class="container">
           <div class="row align-items-center">
+            {/* our mission start */}
             <div class="col-lg-6 py-3" data-aos="fade-right">
               <div class="img-fluid py-3 text-center">
-                <img src={image1} className="img-fluid" alt="about" />
+                <img src={image1} className="img-fluid" alt="our_mission" />
               </div>
             </div>
             <div class="col-lg-6 py-3" data-aos="fade-left">
@@ -219,6 +208,9 @@ export default function About() {
                 career opportunities that match their skills and aspirations.
               </p>
             </div>
+            {/* our mission end */}
+
+            {/* our vision start*/}
             <div class="col-lg-6 py-3" data-aos="fade-up">
               <h2 class="text-primary">Our Vision</h2>
               <div class="divider"></div>
@@ -238,13 +230,15 @@ export default function About() {
             </div>
             <div class="col-lg-6 py-3" data-aos="fade-up">
               <div class="img-fluid py-3 text-center">
-                <img src={image2} className="img-fluid" alt="about" />
+                <img src={image2} className="img-fluid" alt="our_vision" />
               </div>
             </div>
+            {/* our vision end */}
           </div>
         </div>
       </div>
 
+      {/* our ceo says */}
       <div class="container-fluid py-5">
         <div class="container py-5">
           <div class="row align-items-center">
@@ -252,7 +246,7 @@ export default function About() {
               <img
                 class="img-fluid rounded mb-4 mb-lg-0"
                 src={image1}
-                alt=""
+                alt="our_ceo_says"
                 data-aos="fade-up"
               />
             </div>
@@ -286,6 +280,7 @@ export default function About() {
         </div>
       </div>
 
+      {/* our team members carousel */}
       <div class="container-xxl py-5">
         <div class="container px-lg-5">
           <div
@@ -296,6 +291,7 @@ export default function About() {
             <h2 class="mb-3 text-primary">Our Team Members</h2>
           </div>
 
+          {/* carousel */}
           <Carousel
             ssr
             partialVisbile

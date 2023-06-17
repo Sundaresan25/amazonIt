@@ -10,6 +10,8 @@ import v8 from "../../Assests/Images/vendor-8.jpg";
 import v9 from "../../Assests/Images/vendor-9.jpg";
 
 export const OurPartners = () => {
+  // responsive for carousel
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -30,8 +32,10 @@ export const OurPartners = () => {
     },
   };
 
+  // client logos
   const clientLogos = [v1, v2, v3, v4, v5, v6, v7, v8, v9];
   return (
+    // ourpartners
     <section className="ourpartners">
       <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5 mb-5">

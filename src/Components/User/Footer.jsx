@@ -1,7 +1,9 @@
 import { useLocation, Link } from "react-router-dom";
 
 export default function Footer() {
+  // useLocation
   const location = useLocation();
+  // menus
   const paths = [
     {
       path: "/",
@@ -31,6 +33,7 @@ export default function Footer() {
     },
   ];
 
+  // social  medias links
   const socialMedia = [
     {
       name: "Facebook",
@@ -42,11 +45,7 @@ export default function Footer() {
       url: "https://www.linkedin.com/company/amazon-it-solution/",
       logo: "mai-logo-linkedin",
     },
-    // {
-    //   name: "WhatsApp",
-    //   url: "https://wa.me/message/QA5EQSULC22MM1",
-    //   logo: "mai-logo-whatsapp",
-    // },
+
     {
       name: "Instagram",
       url: "https://instagram.com/amazonitsolutions?igshid=OTk0YzhjMDVlZA==",
@@ -60,6 +59,7 @@ export default function Footer() {
   ];
 
   return (
+    // footer
     <section className="footer">
       <footer
         class="page-footer bg-image footerCon "
@@ -76,24 +76,6 @@ export default function Footer() {
                 we are committed to provide a seamless and efficient recruitment
                 process for both clients and candidates.
               </p>
-              {/* 
-              <div class="social-media-button">
-                <a href="#">
-                  <span class="mai-logo-facebook-f"></span>
-                </a>
-                <a href="#">
-                  <span class="mai-logo-twitter"></span>
-                </a>
-                <a href="#">
-                  <span class="mai-logo-google-plus-g"></span>
-                </a>
-                <a href="#">
-                  <span class="mai-logo-instagram"></span>
-                </a>
-                <a href="#">
-                  <span class="mai-logo-youtube"></span>
-                </a>
-              </div> */}
             </div>
             <div
               class="col-lg-3 py-3"
@@ -101,6 +83,7 @@ export default function Footer() {
             >
               <h5>Quick Links</h5>
               <ul class="footer-menu">
+                {/* menus mapping */}
                 {paths.map((data, index) => (
                   <li key={index}>
                     <Link to={data.path}>{data.label}</Link>
@@ -115,9 +98,10 @@ export default function Footer() {
             >
               <h5>Follow us</h5>
               <ul class="footer-menu">
+                {/* social media links mapping */}
                 {socialMedia.map((data, index) => (
                   <li key={index}>
-                    <a href={data.url} target="_blank">
+                    <a href={data.url} target="_blank" rel="noreferrer">
                       {" "}
                       <span class={data.logo}></span> {data.name}
                     </a>
@@ -128,9 +112,9 @@ export default function Footer() {
             <div class="col-lg-3 py-3">
               <h5>Corporate Office</h5>
               <p className="mb-0">
-                5/A Plot No, Door NO.1-99 8, 2,
-                <br /> Image Gardens Road,
-                <br /> Madhapur, Hyderabad - 500081.
+                The Skyviwe -10, COWRKS 1st & 2nd Floor,
+                <br /> Hitech City Main Road, Raidurgam
+                <br /> Madhapur, Hyderabad - 500081 <br /> (Opposite IKEA)
               </p>
               <br />
               <p>

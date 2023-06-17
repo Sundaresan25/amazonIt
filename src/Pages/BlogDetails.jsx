@@ -229,7 +229,10 @@ export default function BlogDetails() {
 
                   <div class="blog-item">
                     <a class="post-thumb" href="">
-                      <img src="../assets/img/blog/blog-3.jpg" alt="" />
+                      <img
+                        src="../assets/img/blog/recruitment_agency.jpg"
+                        alt=""
+                      />
                     </a>
                     <div class="content">
                       <h6 class="post-title">
