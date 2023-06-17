@@ -1,4 +1,4 @@
-import career1 from "../Assests/Images/jobs_in_amazon_it_solutions.jpg";
+import career1 from "../Assests/Images/jobs_amazon_it_solutions.jpg";
 
 import * as React from "react";
 import { styled } from "@mui/material/styles";
