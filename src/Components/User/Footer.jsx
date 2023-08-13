@@ -113,7 +113,8 @@ export default function Footer() {
               <h5>Corporate Office</h5>
               <p className="mb-0">
                 The Skyviwe -10, COWRKS 1st & 2nd Floor,
-                <br /> Hitech City Main Road, Raidurgam
+                <br />
+                Sy no 83/1, Hitech City Main Road, Raidurgam,
                 <br /> Madhapur, Hyderabad - 500081 <br /> (Opposite IKEA)
               </p>
               <br />

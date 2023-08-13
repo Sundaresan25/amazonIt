@@ -159,9 +159,9 @@ export default function Contact() {
                   <h5 class="mb-2">Visit our office</h5>
                   <small class="text-primary mb-0">
                     {" "}
-                    The Skyviwe -10, COWRKS 1st & 2nd Floor, Hitech City Main
-                    Road, Raidurgam, Madhapur, Hyderabad - 500081 (Opposite
-                    IKEA)
+                    The Skyview -10, COWRKS 1st & 2nd Floor, Sy no 83/1
+                    Raidurgam, Hitech City Main Road Madhapur, Hyderabad-500081.
+                    (Opposite IKEA )
                   </small>
                 </div>
               </div>
